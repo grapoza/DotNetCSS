@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) [year] [fullname]
+Copyright for portions of project NetCSS are held by Tyler Brinks (2017) as part of project ExCSS (https://github.com/TylerBrinks/ExCSS). All other copyright for project NetCSS are held by Gregg Rapoza (2018).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
