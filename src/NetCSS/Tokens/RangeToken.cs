@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class RangeToken : Token
     {

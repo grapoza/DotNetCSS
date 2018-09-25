@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ExCSS
+namespace NetCSS
 {
     public sealed class PseudoElementSelectorFactory
     {

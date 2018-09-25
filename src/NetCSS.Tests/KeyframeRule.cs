@@ -1,4 +1,4 @@
-﻿namespace ExCSS.Tests
+﻿namespace NetCSS.Tests
 {
     using Xunit;
     using System.Linq;

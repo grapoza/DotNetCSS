@@ -2,7 +2,7 @@
 using System.Linq;
 
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class OptionValueConverter : IValueConverter
     {

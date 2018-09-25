@@ -1,5 +1,5 @@
 ﻿
-namespace ExCSS
+namespace NetCSS
 {
     public abstract class Rule : StylesheetNode, IRule
     {

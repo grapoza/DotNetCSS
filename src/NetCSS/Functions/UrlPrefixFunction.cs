@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class UrlPrefixFunction : DocumentFunction
     {

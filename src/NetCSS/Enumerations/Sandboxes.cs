@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExCSS
+namespace NetCSS
 {
     [Flags]
     public enum Sandboxes : ushort

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class AspectRatioMediaFeature : MediaFeature
     {

@@ -1,4 +1,4 @@
-﻿namespace ExCSS
+﻿namespace NetCSS
 {
     internal enum QuirksMode : byte
     {

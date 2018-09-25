@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal static class Converters
     {

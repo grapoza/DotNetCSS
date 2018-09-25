@@ -1,5 +1,5 @@
 ﻿using System.IO;
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class Comment : StylesheetNode
     {

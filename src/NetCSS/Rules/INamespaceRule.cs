@@ -1,4 +1,4 @@
-﻿namespace ExCSS
+﻿namespace NetCSS
 {
     public interface INamespaceRule : IRule
     {

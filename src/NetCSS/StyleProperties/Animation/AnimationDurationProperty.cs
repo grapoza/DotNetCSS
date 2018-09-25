@@ -1,5 +1,5 @@
 ﻿
-namespace ExCSS
+namespace NetCSS
 {
     sealed class AnimationDurationProperty : Property
     {

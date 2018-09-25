@@ -1,5 +1,5 @@
 ﻿
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class ObjectFitProperty : Property
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class PropertyFactory 
     {

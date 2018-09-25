@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExCSS
+namespace NetCSS
 {
     public struct Number : IEquatable<Number>, IComparable<Number>, IFormattable
     {

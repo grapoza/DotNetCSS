@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace ExCSS
+namespace NetCSS
 {
     public sealed class StyleDeclaration : StylesheetNode, IProperties
     {

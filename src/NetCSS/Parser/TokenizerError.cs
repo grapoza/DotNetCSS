@@ -1,6 +1,6 @@
 ﻿
 
-namespace ExCSS
+namespace NetCSS
 {
     public class TokenizerError 
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExCSS
+namespace NetCSS
 {
     public sealed class TransformMatrix : IEquatable<TransformMatrix>
     {

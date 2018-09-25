@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class ComplexSelector : StylesheetNode, ISelector
     {

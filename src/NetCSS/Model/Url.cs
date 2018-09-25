@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ExCSS
+namespace NetCSS
 {
     /// <summary>
     ///     Url class according to RFC3986. 

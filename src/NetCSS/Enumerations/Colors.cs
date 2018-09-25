@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ExCSS
+namespace NetCSS
 {
     public static class Colors
     {

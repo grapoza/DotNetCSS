@@ -1,4 +1,4 @@
-﻿namespace ExCSS
+﻿namespace NetCSS
 {
     internal static class Combinators
     {

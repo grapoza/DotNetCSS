@@ -1,5 +1,5 @@
 ﻿
-namespace ExCSS
+namespace NetCSS
 {
     using static Converters;
 

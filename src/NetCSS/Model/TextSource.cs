@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ExCSS
+namespace NetCSS
 {
     public sealed class TextSource : IDisposable
     {

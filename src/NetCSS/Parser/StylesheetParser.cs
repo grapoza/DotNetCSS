@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ExCSS
+namespace NetCSS
 {
     public class StylesheetParser
     {

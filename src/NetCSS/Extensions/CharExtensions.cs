@@ -1,4 +1,4 @@
-﻿namespace ExCSS
+﻿namespace NetCSS
 {
 #if !NET40
     using System.Runtime.CompilerServices;

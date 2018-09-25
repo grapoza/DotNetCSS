@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class CompoundSelector : Selectors, ISelector
     {

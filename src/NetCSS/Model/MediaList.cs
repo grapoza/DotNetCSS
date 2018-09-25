@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace ExCSS
+namespace NetCSS
 {
     public sealed class MediaList : StylesheetNode
     {

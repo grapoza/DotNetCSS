@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class KeyframeRule : Rule, IKeyframeRule
     {

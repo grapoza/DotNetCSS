@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace ExCSS
+namespace NetCSS
 {
     public struct Length : IEquatable<Length>, IComparable<Length>, IFormattable
     {

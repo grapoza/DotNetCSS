@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal static class Symbols
     {

@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal abstract class DocumentFunction : StylesheetNode, IDocumentFunction
     {

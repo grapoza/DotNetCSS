@@ -1,8 +1,8 @@
 using Xunit;
 
-namespace ExCSS.Tests
+namespace NetCSS.Tests
 {
-    using ExCSS;
+    using NetCSS;
     using System.Linq;
 
 	//[TestFixture]

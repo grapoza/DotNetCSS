@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class UnitToken : Token
     {

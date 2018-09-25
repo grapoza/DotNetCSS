@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 
-namespace ExCSS
+namespace NetCSS
 {
     [StructLayout(LayoutKind.Explicit, Pack = 1, CharSet = CharSet.Unicode)]
     public struct Color : IEquatable<Color>, IComparable<Color>, IFormattable

@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace ExCSS
+namespace NetCSS
 { 
     public abstract class MediaFeature : StylesheetNode, IMediaFeature
     {

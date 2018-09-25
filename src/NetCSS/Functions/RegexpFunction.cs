@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace ExCSS
+namespace NetCSS
 {
     internal sealed class RegexpFunction : DocumentFunction
     {
