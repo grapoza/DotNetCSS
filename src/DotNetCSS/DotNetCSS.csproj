@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.1;net452</TargetFrameworks>
+    <AssemblyName>DotNetCSS</AssemblyName>
+    <PackageId>DotNetCSS</PackageId>
+    <Title>DotNetCSS .NET Stylesheet Parser</Title>
+    <Authors>Tyler Brinks (via ExCSS), Gregg Rapoza (DotNetCSS)</Authors>
+    <Description>DotNetCSS is a CSS 2.1 and CSS 3 parser for .NET.</Description>
+    <RepositoryUrl>https://github.com/grapoza/DotNetCSS</RepositoryUrl>
+    <PackageVersion>3.0.0-beta1-20180924</PackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>
