@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1;net462</TargetFramework>
+    <AssemblyName>NetCSS</AssemblyName>
+    <PackageId>NetCSS</PackageId>
+    <Title>NetCSS .NET Stylesheet Parser</Title>
+    <Authors>Tyler Brinks (via ExCSS), Gregg Rapoza (NetCSS)</Authors>
+    <Description>NetCSS is a CSS 2.1 and CSS 3 parser for .NET.</Description>
+    <RepositoryUrl>https://github.com/grapoza/NetCSS</RepositoryUrl>
+    <PackageVersion>3.0.0-beta1-20180924</PackageVersion>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>
