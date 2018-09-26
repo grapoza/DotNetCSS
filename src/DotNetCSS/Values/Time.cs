@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public struct Time : IEquatable<Time>, IComparable<Time>, IFormattable
     {

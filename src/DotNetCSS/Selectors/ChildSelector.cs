@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal abstract class ChildSelector : StylesheetNode, ISelector
     {

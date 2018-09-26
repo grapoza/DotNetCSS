@@ -1,8 +1,8 @@
-# NetCSS StyleSheet Parser for .NET
+# DotNetCSS StyleSheet Parser for .NET
 
 ## Overview
 
-NetCSS is a continuation of the [ExCSS](https://github.com/TylerBrinks/ExCSS) CSS parser project. The orignal project appears to no longer take pull requests, and so this project was created to pick up where ExCSS version 3.0 left off. NetCSS is a .NET implementation of a CSS 2.1 and CSS 3 lexer and parser intended to provide an easy-to-use CSS object model.
+DotNetCSS is a continuation of the [ExCSS](https://github.com/TylerBrinks/ExCSS) CSS parser project. The orignal project appears to no longer take pull requests, and so this project was created to pick up where ExCSS version 3.0 left off. DotNetCSS is a .NET implementation of a CSS 2.1 and CSS 3 lexer and parser intended to provide an easy-to-use CSS object model.
  
 ## Installation
 

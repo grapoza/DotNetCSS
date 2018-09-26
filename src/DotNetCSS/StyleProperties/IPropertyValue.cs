@@ -1,5 +1,5 @@
 ﻿
-namespace NetCSS
+namespace DotNetCSS
 {
     internal interface IPropertyValue
     {

@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public static class FormatExtensions
     {

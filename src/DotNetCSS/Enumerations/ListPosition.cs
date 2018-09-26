@@ -1,4 +1,4 @@
-﻿namespace NetCSS
+﻿namespace DotNetCSS
 {
     public enum ListPosition : byte
     {

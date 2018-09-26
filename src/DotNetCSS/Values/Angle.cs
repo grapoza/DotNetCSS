@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public struct Angle : IEquatable<Angle>, IComparable<Angle>, IFormattable
     {

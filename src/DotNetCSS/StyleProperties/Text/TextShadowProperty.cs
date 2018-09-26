@@ -1,6 +1,6 @@
 ﻿
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal sealed class TextShadowProperty : Property
     {

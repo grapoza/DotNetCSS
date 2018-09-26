@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public abstract class Property : StylesheetNode, IProperty
     {
@@ -20,7 +20,7 @@ namespace NetCSS
 
         internal bool TrySetValue(TokenValue newTokenValue)
         {
-            var value = Converter.Convert(newTokenValue ?? NetCSS.TokenValue.Initial);
+            var value = Converter.Convert(newTokenValue ?? DotNetCSS.TokenValue.Initial);
 
             if (value != null)
             {

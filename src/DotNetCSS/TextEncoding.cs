@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public static class TextEncoding
     {

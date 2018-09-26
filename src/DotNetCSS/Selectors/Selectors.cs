@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal abstract class Selectors : StylesheetNode, IEnumerable<ISelector>
     {

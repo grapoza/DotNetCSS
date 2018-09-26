@@ -2,9 +2,9 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Linq;
-using NetCSS;
+using DotNetCSS;
 
-namespace NetCSS.Tests
+namespace DotNetCSS.Tests
 {
     static class TestExtensions
     {

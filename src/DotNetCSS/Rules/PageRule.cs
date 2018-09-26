@@ -2,7 +2,7 @@
 using System.Linq;
 
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal sealed class PageRule : Rule, IPageRule
     {

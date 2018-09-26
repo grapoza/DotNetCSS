@@ -1,4 +1,4 @@
-﻿namespace NetCSS
+﻿namespace DotNetCSS
 {
     internal sealed class MatrixTransform : ITransform
     {

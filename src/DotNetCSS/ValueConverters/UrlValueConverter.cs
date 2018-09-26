@@ -2,7 +2,7 @@
 
 
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal sealed class UrlValueConverter : IValueConverter
     {

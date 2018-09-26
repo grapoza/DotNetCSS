@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     [Flags]
     internal enum PropertyFlags : byte

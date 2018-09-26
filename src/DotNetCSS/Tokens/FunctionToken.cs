@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal sealed class FunctionToken : Token, IEnumerable<Token>
     {

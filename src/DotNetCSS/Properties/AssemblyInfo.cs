@@ -7,9 +7,9 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NetCSS")]
+[assembly: AssemblyProduct("DotNetCSS")]
 [assembly: AssemblyTrademark("")]
-[assembly: InternalsVisibleTo("NetCSS.Tests")]
+[assembly: InternalsVisibleTo("DotNetCSS.Tests")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from

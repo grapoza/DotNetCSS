@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 #if !NET40 && !SL50
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal static class PortableExtensions
     {

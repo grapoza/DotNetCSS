@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal static class Pool
     {

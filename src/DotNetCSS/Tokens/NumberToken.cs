@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal sealed class NumberToken : Token
     {

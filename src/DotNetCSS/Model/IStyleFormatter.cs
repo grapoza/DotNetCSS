@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-namespace NetCSS
+namespace DotNetCSS
 {
     public interface IStyleFormatter
     {

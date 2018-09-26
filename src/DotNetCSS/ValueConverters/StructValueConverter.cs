@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal sealed class StructValueConverter<T> : IValueConverter
         where T : struct, IFormattable

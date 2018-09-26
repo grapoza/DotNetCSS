@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal sealed class Lexer : LexerBase
     {

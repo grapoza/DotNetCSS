@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public abstract class StylesheetNode : IStylesheetNode
     {

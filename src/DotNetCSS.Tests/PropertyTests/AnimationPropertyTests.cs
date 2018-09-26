@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace NetCSS.Tests
+namespace DotNetCSS.Tests
 {
     //[TestFixture]
     public class AnimationPropertyTests : CssConstructionFunctions

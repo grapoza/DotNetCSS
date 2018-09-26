@@ -1,6 +1,6 @@
-﻿namespace NetCSS.Tests
+﻿namespace DotNetCSS.Tests
 {
-    using NetCSS;
+    using DotNetCSS;
 
     public class CssConstructionFunctions
     {

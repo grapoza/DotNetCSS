@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public struct Frequency : IEquatable<Frequency>, IComparable<Frequency>, IFormattable
     {

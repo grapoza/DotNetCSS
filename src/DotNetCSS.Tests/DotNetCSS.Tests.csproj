@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.1;net452</TargetFrameworks>
-    <AssemblyName>NetCSS.Tests</AssemblyName>
-    <PackageId>NetCSS.Tests</PackageId>
+    <AssemblyName>DotNetCSS.Tests</AssemblyName>
+    <PackageId>DotNetCSS.Tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetCSS\NetCSS.csproj" />
+    <ProjectReference Include="..\DotNetCSS\DotNetCSS.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
-﻿namespace NetCSS.Tests
+﻿namespace DotNetCSS.Tests
 {
-    using NetCSS;
-    using NetCSS;
+    using DotNetCSS;
+    using DotNetCSS;
     using Xunit;
 
     //[TestFixture]

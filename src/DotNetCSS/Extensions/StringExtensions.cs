@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Linq;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal static class StringExtensions
     {

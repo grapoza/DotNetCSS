@@ -1,5 +1,5 @@
 ﻿using System.IO;
-namespace NetCSS
+namespace DotNetCSS
 {
     public interface IStyleFormattable
     {

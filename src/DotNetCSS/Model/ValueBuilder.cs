@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal sealed class ValueBuilder
     {

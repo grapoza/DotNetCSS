@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal static class ParserExtensions
     {

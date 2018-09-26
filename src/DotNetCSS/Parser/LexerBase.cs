@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     internal abstract class LexerBase : IDisposable
     {

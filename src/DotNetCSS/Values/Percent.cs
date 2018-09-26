@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public struct Percent : IEquatable<Percent>, IComparable<Percent>, IFormattable
     {

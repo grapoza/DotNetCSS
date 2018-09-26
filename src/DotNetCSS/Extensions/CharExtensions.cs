@@ -1,4 +1,4 @@
-﻿namespace NetCSS
+﻿namespace DotNetCSS
 {
 #if !NET40
     using System.Runtime.CompilerServices;

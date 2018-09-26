@@ -1,6 +1,6 @@
 ﻿
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public class TokenizerError 
     {

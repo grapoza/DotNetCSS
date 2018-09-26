@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public struct Resolution : IEquatable<Resolution>, IComparable<Resolution>, IFormattable
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public sealed class CompressedStyleFormatter : IStyleFormatter
     {

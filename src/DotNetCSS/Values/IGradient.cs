@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NetCSS
+namespace DotNetCSS
 {
     public interface IGradient : IImageSource
     {
