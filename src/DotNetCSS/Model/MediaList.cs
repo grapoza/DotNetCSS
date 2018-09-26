@@ -22,7 +22,7 @@ namespace DotNetCSS
             get { return this.ToCss(); }
             set
             {
-                Clear();
+                ClearChildren();
 
                 foreach (var medium in _parser.ParseMediaList(value))
                 {

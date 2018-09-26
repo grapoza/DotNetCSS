@@ -1030,7 +1030,7 @@ namespace DotNetCSS
 
                 if ((token.Type != end) || (list.Length == 0))
                 {
-                    list.Clear();
+                    list.ClearChildren();
                     list.AppendChild(new Medium
                     {
                         IsInverse = true,

@@ -1,10 +1,8 @@
 ﻿namespace DotNetCSS.Tests
 {
     using DotNetCSS;
-    using DotNetCSS;
-    using DotNetCSS;
-    using Xunit;
     using System;
+    using Xunit;
 
     //[TestFixture]
     public class CssMediaListTests : CssConstructionFunctions

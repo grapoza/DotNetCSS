@@ -32,7 +32,7 @@ namespace DotNetCSS
 
         public void Update(string value)
         {
-            Clear();
+            ClearChildren();
 
             if (!string.IsNullOrEmpty(value))
             {
