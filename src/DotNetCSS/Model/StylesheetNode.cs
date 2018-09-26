@@ -16,7 +16,7 @@ namespace DotNetCSS
 
         protected void ReplaceAll(IStylesheetNode node)
         {
-            Clear();
+            ClearChildren();
             StylesheetText = node.StylesheetText;
             foreach (var child in node.Children)
             {
@@ -74,7 +74,7 @@ namespace DotNetCSS
             _children.Remove(child);
         }
 
-        public void Clear()
+        public void ClearChildren()
         {
             for (var i = _children.Count - 1; i >= 0; i--)
             {

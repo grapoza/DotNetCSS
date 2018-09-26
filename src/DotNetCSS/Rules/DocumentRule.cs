@@ -34,7 +34,7 @@ namespace DotNetCSS
                     throw new ParseException("Unable to parse document rules");
                 }
 
-                Clear();
+                ClearChildren();
 
                 foreach (var condition in conditions)
                 {

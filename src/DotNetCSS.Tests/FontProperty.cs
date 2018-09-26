@@ -1,7 +1,6 @@
 ﻿namespace DotNetCSS.Tests
 {
     using DotNetCSS;
-    using DotNetCSS;
     using Xunit;
 
     //[TestFixture]
