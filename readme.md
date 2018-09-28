@@ -8,13 +8,13 @@ DotNetCSS is a continuation of the [ExCSS](https://github.com/TylerBrinks/ExCSS)
 
 TODO: Get this on NuGet
 
-## A basic example: 
-
-**TODO: Update this to a working model of the ExCSS 3.0 syntax**
-	var parser = new StylesheetParser();
-	var stylesheet = parser.Parse(".someClass{color: red; background-image: url('/images/logo.png')");
+## A basic example
+```c#
+var parser = new StylesheetParser();
+var stylesheet = parser.Parse(".someClass{color: red; background-image: url('/images/logo.png')");
 	
-	var rule = stylesheet.Rules.First()
-	var selector = rule.SelectorText; // Yields .someClass
-        var color = rule.Style.Color;
-	var image = rule.Style.BackgroundImage; // url('/images/logo.png')
+var rule = stylesheet.Rules.First();
+var selector = rule.SelectorText; // Yields .someClass
+    var color = rule.Style.Color;
+var image = rule.Style.BackgroundImage; // url('/images/logo.png')
+```
