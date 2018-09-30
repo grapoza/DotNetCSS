@@ -2,7 +2,7 @@
 
 namespace DotNetCSS
 {
-    public sealed class CharsetRule : Rule
+    internal sealed class CharsetRule : Rule, ICharsetRule
     {
         internal CharsetRule(StylesheetParser parser)
             : base(RuleType.Charset, parser)

@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace DotNetCSS
 {
-    internal sealed class ImportRule : Rule
+    internal sealed class ImportRule : Rule, IImportRule
     {
         private Stylesheet _stylesheet;
 
