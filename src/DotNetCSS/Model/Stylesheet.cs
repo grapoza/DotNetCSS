@@ -16,13 +16,13 @@ namespace DotNetCSS
 
         internal RuleList Rules { get; }
 
-        public IEnumerable<IRule> CharacterSetRules => Rules.Where(r => r is CharsetRule);
-        public IEnumerable<IRule> FontfaceSetRules => Rules.Where(r => r is FontFaceRule);
-        public IEnumerable<IRule> MediaRules => Rules.Where(r => r is MediaRule);
-        public IEnumerable<IRule> ImportRules => Rules.Where(r => r is ImportRule);
-        public IEnumerable<IRule> NamespaceRules => Rules.Where(r => r is NamespaceRule);
-        public IEnumerable<IRule> PageRules => Rules.Where(r => r is PageRule);
-        public IEnumerable<IRule> StyleRules => Rules.Where(r => r is StyleRule);
+        public IEnumerable<ICharsetRule> CharacterSetRules => Rules.OfType<CharsetRule>();
+        public IEnumerable<IFontFaceRule> FontfaceSetRules => Rules.OfType<FontFaceRule>();
+        public IEnumerable<IMediaRule> MediaRules => Rules.OfType <MediaRule>();
+        public IEnumerable<IImportRule> ImportRules => Rules.OfType <ImportRule>();
+        public IEnumerable<INamespaceRule> NamespaceRules => Rules.OfType <NamespaceRule>();
+        public IEnumerable<IPageRule> PageRules => Rules.OfType <PageRule>();
+        public IEnumerable<IStyleRule> StyleRules => Rules.OfType<StyleRule>();
 
         public IRule Add(RuleType ruleType)
         {
