@@ -1,14 +1,18 @@
+--- 
 version: '1.0.{build}'
 image: Visual Studio 2017
 # configuration for "master" branch
 # build in Release mode
-- branches:
-    only:
-      - master
-  configuration: Release
+for: 
+  - 
+    branches: 
+      only: 
+        - master
+    configuration: Release
 # "fall back" configuration for all other branches
-- configuration: Debug
+configuration: Debug
 init:
   - cmd: git config --global core.autocrlf true
 before_build:
   - cmd: dotnet restore DotNetCSS.sln --verbosity m
+...
