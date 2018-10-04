@@ -1,18 +1,24 @@
 --- 
 version: '1.0.{build}'
 image: Visual Studio 2017
+
 # configuration for "master" branch
-# build in Release mode
+# build in Release mode; set PublicRelease=true for GitVersioning
 for: 
   - 
     branches: 
       only: 
         - master
     configuration: Release
+    build_script:
+      - cmd: dotnet build DotNetCSS.sln /p:PublicRelease=true /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+      
 # "fall back" configuration for all other branches
 configuration: Debug
 init:
   - cmd: git config --global core.autocrlf true
 before_build:
   - cmd: dotnet restore DotNetCSS.sln --verbosity m
+build_script:
+  - cmd: dotnet build DotNetCSS.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 ...
