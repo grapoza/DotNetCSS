@@ -24,7 +24,7 @@ deploy:
       secure: wnx04Cn818J/YtTFE3cqXnSUSpEWwrqsiXoVxZw/HvmuuV8OnOQStQeoLPJJXcUM
     artifact: /.*\.nupkg/
     on:
-      appveor_repo_tag: true
+      appveyor_repo_tag: true
 
 # configuration for "master" branch
 # build in Release mode; set PublicRelease=true for GitVersioning
