@@ -20,7 +20,7 @@ init:
 before_build:
   - cmd: dotnet restore DotNetCSS.sln --verbosity m
 build_script:
-  - cmd: msbuild DotNetCSS.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-test_script:
-  - cmd: dotnet test "src/DotNetCSS.Tests/DotNetCSS.Tests.csproj"
+  - cmd: dotnet build --no-restore # msbuild DotNetCSS.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+# test_script:
+#   - cmd: dotnet test "src/DotNetCSS.Tests/DotNetCSS.Tests.csproj" --no-build --no-restore
 ...
