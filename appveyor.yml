@@ -22,5 +22,5 @@ before_build:
 build_script:
   - cmd: msbuild DotNetCSS.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 test_script:
-  - cmd: dotnet test DotNetCSS.Tests/DotNetCSS.Tests.csproj
+  - cmd: dotnet test "DotNetCSS.Tests\DotNetCSS.Tests.csproj"
 ...
