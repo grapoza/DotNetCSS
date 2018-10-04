@@ -11,7 +11,7 @@ for:
         - master
     configuration: Release
     build_script:
-      - cmd: dotnet build DotNetCSS.sln /p:PublicRelease=true /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+      - cmd: msbuild DotNetCSS.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /p:PublicRelease=true
       
 # "fall back" configuration for all other branches
 configuration: Debug
@@ -20,5 +20,5 @@ init:
 before_build:
   - cmd: dotnet restore DotNetCSS.sln --verbosity m
 build_script:
-  - cmd: dotnet build DotNetCSS.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild DotNetCSS.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 ...
