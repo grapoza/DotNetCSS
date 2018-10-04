@@ -1,6 +1,17 @@
 --- 
 version: '1.0.{build}'
 image: Visual Studio 2017
+      
+# Default configuration
+configuration: Debug
+init:
+  - cmd: git config --global core.autocrlf true
+before_build:
+  - cmd: dotnet restore DotNetCSS.sln --verbosity m
+build_script:
+  - cmd: dotnet build --no-restore # msbuild DotNetCSS.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+test_script:
+  - cmd: dotnet test "src/DotNetCSS.Tests/DotNetCSS.Tests.csproj" --no-build
 
 # configuration for "master" branch
 # build in Release mode; set PublicRelease=true for GitVersioning
@@ -12,15 +23,8 @@ for:
     configuration: Release
     build_script:
       - cmd: dotnet build /p:PublicRelease=true
-      
-# "fall back" configuration for all other branches
-configuration: Debug
-init:
-  - cmd: git config --global core.autocrlf true
-before_build:
-  - cmd: dotnet restore DotNetCSS.sln --verbosity m
-build_script:
-  - cmd: dotnet build --no-restore # msbuild DotNetCSS.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-test_script:
-  - cmd: dotnet test "src/DotNetCSS.Tests/DotNetCSS.Tests.csproj" --no-build --no-restore
+    after_test:
+      - cmd: dotnet pack "src/DotNetCSS/DotNetCSS.csproj" --no-build
+    artifacts:
+      - path: '**\*.nupkg'
 ...
