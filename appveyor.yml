@@ -18,6 +18,7 @@ init:
   - ps: Write-Host "Running against the $env:APPVEYOR_REPO_BRANCH branch with $env:CONFIGURATION configuration. Is this a tag? $env:APPVEYOR_REPO_TAG"
 
 before_build:
+  - cmd: dotnet clean
   - cmd: dotnet restore DotNetCSS.sln --verbosity m
 
 build_script:
