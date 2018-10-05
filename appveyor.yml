@@ -2,18 +2,41 @@
 version: '1.0.{build}'
 image: Visual Studio 2017
       
-# Default configuration
-configuration: Debug
 init:
   - cmd: git config --global core.autocrlf true
+
+  # build in Release mode for master and tags
+  - ps: |
+      if ($env:APPVEYOR_REPO_BRANCH -eq "master" -and $env:APPVEYOR_REPO_TAG -eq "true") 
+      {
+        $env:CONFIGURATION = "Release"
+      } 
+      else 
+      {
+        $env:CONFIGURATION = "Debug"
+      }
+
 before_build:
   - cmd: dotnet restore DotNetCSS.sln --verbosity m
+
 build_script:
-  - cmd: dotnet build --no-restore
+  - ps: |
+      if ($env:APPVEYOR_REPO_TAG -eq "true")
+      {
+        # Set PublicRelease=true for GitVersioning when building a tag
+        dotnet build --no-restore /p:PublicRelease=true
+      }
+      else
+      {
+        dotnet build --no-restore
+      }
+
 test_script:
   - cmd: dotnet test "src/DotNetCSS.Tests/DotNetCSS.Tests.csproj" --no-build
+
 after_test:
   - cmd: dotnet pack "src/DotNetCSS/DotNetCSS.csproj" --no-build
+
 artifacts:
   - path: '**\*.nupkg'
   
@@ -25,15 +48,4 @@ deploy:
     artifact: /.*\.nupkg/
     on:
       appveyor_repo_tag: true
-
-# configuration for "master" branch
-# build in Release mode; set PublicRelease=true for GitVersioning
-for: 
-  - 
-    branches: 
-      only: 
-        - master
-    configuration: Release
-    build_script:
-      - cmd: dotnet build /p:PublicRelease=true
 ...
