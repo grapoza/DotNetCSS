@@ -1,6 +1,6 @@
 # DotNetCSS StyleSheet Parser for .NET
 
-[![Build status](https://ci.appveyor.com/api/projects/status/potjcbo35c6jgjh2/branch/master?svg=true)](https://ci.appveyor.com/project/grapoza/dotnetcss/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/potjcbo35c6jgjh2/branch/master?svg=true)](https://ci.appveyor.com/project/grapoza/dotnetcss/branch/master) [![NuGet](https://img.shields.io/nuget/v/DotNetCSS.svg)](https://www.nuget.org/packages/DotNetCSS)
 
 ## Overview
 
@@ -8,7 +8,13 @@ DotNetCSS is a continuation of the [ExCSS](https://github.com/TylerBrinks/ExCSS)
  
 ## Installation
 
-TODO: Get this on NuGet
+DotNetCSS can be installed from the Visual Studio NuGet Package Manager, or from the NuGet Package Manager Console:
+
+```ps
+Install-Package DotNetCSS
+```
+
+Or, use your favorite package management tool (.NET CLI, Paket CLI, etc).
 
 ## A basic example
 ```c#
