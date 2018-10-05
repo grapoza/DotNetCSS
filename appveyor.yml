@@ -21,18 +21,7 @@ before_build:
   - cmd: dotnet restore DotNetCSS.sln --verbosity m
 
 build_script:
-  - ps: |
-      if ($env:APPVEYOR_REPO_TAG -eq "true")
-      {
-        # Set PublicRelease=true for GitVersioning when building a tag
-        Write-Host "Building using: dotnet build --no-restore /p:PublicRelease=true"
-        dotnet build --no-restore /p:PublicRelease=true
-      }
-      else
-      {
-        Write-Host "Building using: dotnet build --no-restore"
-        dotnet build --no-restore
-      }
+  - ps: dotnet build --no-restore
 
 test_script:
   - cmd: dotnet test "src/DotNetCSS.Tests/DotNetCSS.Tests.csproj" --no-build
