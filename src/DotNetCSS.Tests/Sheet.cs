@@ -840,18 +840,32 @@ p.info span::after {
         public void CssParseStyleWithInvalidSurrogatePair()
         {
             var src = @"span.berschrift2Zchn
-{mso-style-name:""\00DCberschrift 2 Zchn"";
-mso-style-priority:9;
-mso-style-link:""\00DCberschrift 2"";
-font-family:""Cambria"",""serif"";
-color:#4F81BD;
-font-weight:bold;}";
-            var sheet = ParseStyleSheet(src);
+{mso-style-name:""\00DCberschrift 2 Zchn"";}";
+            var sheet = ParseStyleSheet(src, includeUnknownRules: true, includeUnknownDeclarations: true);
             Assert.Equal(1, sheet.Rules.Length);
-            var style = sheet.Rules[0] as StyleRule;
+            var style = sheet.StyleRules.FirstOrDefault();
             Assert.NotNull(style);
             Assert.Equal("span.berschrift2Zchn", style.SelectorText);
-            Assert.Equal(3, style.Style.Length);
+            Assert.Equal(1, style.Style.Length);
+
+            var nameProp = style.Style.Children.Single(c => (c as UnknownProperty)?.Name == "mso-style-name") as UnknownProperty;
+            Assert.Equal("\"�rschrift 2 Zchn\"", nameProp.Value);
+        }
+
+        [Fact]
+        public void CssParseStyleWithValidEscapedUnicodeCodePoint()
+        {
+            var src = @"span.berschrift2Zchn
+{mso-style-name:""\00DC berschrift 2 Zchn"";}";
+            var sheet = ParseStyleSheet(src, includeUnknownRules: true, includeUnknownDeclarations: true);
+            Assert.Equal(1, sheet.Rules.Length);
+            var style = sheet.StyleRules.FirstOrDefault();
+            Assert.NotNull(style);
+            Assert.Equal("span.berschrift2Zchn", style.SelectorText);
+            Assert.Equal(1, style.Style.Length);
+
+            var nameProp = style.Style.Children.Single(c => (c as UnknownProperty)?.Name == "mso-style-name") as UnknownProperty;
+            Assert.Equal("\"Überschrift 2 Zchn\"", nameProp.Value);
         }
 
         [Fact]
