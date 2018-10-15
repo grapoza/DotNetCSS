@@ -91,7 +91,7 @@ namespace DotNetCSS
 
                 var h = _converter.Convert(front);
                 var v = _converter.Convert(back);
-                var o = front.Concat(new Token(TokenType.Delim, "/", TextPosition.Empty)).Concat(back);
+                var o = front.ConcatItems(new Token(TokenType.Delim, "/", TextPosition.Empty)).Concat(back);
 
                 return new BorderRadiusValue(h, v, new TokenValue(o));
             }
@@ -136,7 +136,7 @@ namespace DotNetCSS
             {
                 var h = _horizontal.ExtractFor(name);
                 var v = _vertical.ExtractFor(name);
-                return new TokenValue(h.Concat(Token.Whitespace).Concat(v));
+                return new TokenValue(h.ConcatItems(Token.Whitespace).Concat(v));
             }
         }
     }

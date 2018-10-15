@@ -364,7 +364,7 @@ namespace DotNetCSS
         }
 
         public IRule Parent => _parent;
-        public string this[int index] => Declarations.GetItemByIndex(index).Name;
+        public string this[int index] => Declarations.ElementAt(index).Name;
         public string this[string name] => GetPropertyValue(name);
         public int Length => Declarations.Count();
         public bool IsStrictMode =>/* IsReadOnly ||*/ _parser.Options.IncludeUnknownDeclarations == false;

@@ -13,7 +13,7 @@ namespace DotNetCSS
             _parser = parser;
         }
 
-        public string this[int index] => Media.GetItemByIndex(index).ToCss();
+        public string this[int index] => Media.ElementAt(index).ToCss();
         public IEnumerable<Medium> Media => Children.OfType<Medium>();
         public int Length => Media.Count();
 

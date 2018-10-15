@@ -13,7 +13,7 @@ namespace DotNetCSS
             _parent = parent;
         }
 
-        public Rule this[int index] => Nodes.GetItemByIndex(index);
+        public Rule this[int index] => Nodes.ElementAt(index);
         IRule IRuleList.this[int index] => this[index];
         public bool HasDeclarativeRules => Nodes.Any(IsDeclarativeRule);
         public IEnumerable<Rule> Nodes => _parent.Children.OfType<Rule>();

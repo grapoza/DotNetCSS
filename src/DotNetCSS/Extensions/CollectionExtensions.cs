@@ -1,38 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DotNetCSS
 {
     internal static class CollectionExtensions
     {
-        public static IEnumerable<T> Concat<T>(this IEnumerable<T> items, T element)
+        /// <summary>
+        /// Adds single items to an <see cref="IEnumerable{T}"/>.
+        /// </summary>
+        /// <typeparam name="T">The type of the elements in the sequence.</typeparam>
+        /// <param name="target">The sequence to which elements will be concatenated.</param>
+        /// <param name="items">The items to concatenate.</param>
+        /// <returns>An IEnumerable including the original sequence followed by the concatenated items.</returns>
+        public static IEnumerable<T> ConcatItems<T>(this IEnumerable<T> target, params T[] items)
         {
-            foreach (var item in items)
-            {
-                yield return item;
-            }
-
-            yield return element;
-        }
-
-        public static T GetItemByIndex<T>(this IEnumerable<T> items, int index)
-        {
-            if (index < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(index));
-            }
-
-            var i = 0;
-
-            foreach (var item in items)
-            {
-                if (i++ == index)
-                {
-                    return item;
-                }
-            }
-
-            throw new ArgumentOutOfRangeException(nameof(index));
+            return target.Concat(items ?? new[] { default(T) });
         }
     }
 }
