@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssMediaFeaturesTests
+    public class MediaFeaturesTests
     {
         [Fact]
-        public void CssMediaFeatureFactory()
+        public void MediaFeatureFactoryCreatesFeatures()
         {
             var aspectRatio = MediaFeatureFactory.Instance.Create(FeatureNames.AspectRatio);
             Assert.NotNull(aspectRatio);
@@ -38,7 +38,7 @@
         }
 
         [Fact]
-        public void CssMediaWidthValidation()
+        public void MediaWidthValidation()
         {
             var width = new WidthMediaFeature(FeatureNames.Width);
             /*var check = width.TrySetValue(new Length(100, Length.Unit.Px));
@@ -50,7 +50,7 @@
         }
 
         [Fact]
-        public void CssMediaMaxHeightValidation()
+        public void MediaMaxHeightValidation()
         {
             var height = new HeightMediaFeature(FeatureNames.MaxHeight);
             /*var check = height.TrySetValue(new Length(100, Length.Unit.Px));
@@ -62,7 +62,7 @@
         }
 
         [Fact]
-        public void CssMediaMinDeviceWidthValidation()
+        public void MediaMinDeviceWidthValidation()
         {
             var devwidth = new DeviceWidthMediaFeature(FeatureNames.MinDeviceWidth);
             /*var check = devwidth.TrySetValue(new Length(100, Length.Unit.Px));
@@ -74,7 +74,7 @@
         }
 
         [Fact]
-        public void CssMediaAspectRatio()
+        public void MediaAspectRatio()
         {
             var ratio = new AspectRatioMediaFeature(FeatureNames.AspectRatio);
             /*var check = ratio.TrySetValue(new CssValueList(new List<ICssValue>(new ICssValue[] {

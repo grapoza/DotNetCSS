@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssTransformPropertyTests : CssConstructionFunctions
+    public class TransformPropertyTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssPerspectiveNoneUppercaseLegal()
+        public void PerspectiveNoneUppercaseLegal()
         {
             var snippet = "perspective:  NONE ";
             var property = ParseDeclaration(snippet);
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveLengthPixelLegal()
+        public void PerspectiveLengthPixelLegal()
         {
             var snippet = "perspective:  20px  ";
             var property = ParseDeclaration(snippet);
@@ -35,7 +35,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveLengthEmLegal()
+        public void PerspectiveLengthEmLegal()
         {
             var snippet = "perspective:  3.5em  ";
             var property = ParseDeclaration(snippet);
@@ -49,7 +49,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveZeroLegal()
+        public void PerspectiveZeroLegal()
         {
             var snippet = "perspective:  0  ";
             var property = ParseDeclaration(snippet);
@@ -63,7 +63,7 @@
         }
 
         [Fact]
-        public void CssPerspectivePercentIllegal()
+        public void PerspectivePercentIllegal()
         {
             var snippet = "perspective:  10%  ";
             var property = ParseDeclaration(snippet);
@@ -76,7 +76,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveOriginZeroLegal()
+        public void PerspectiveOriginZeroLegal()
         {
             var snippet = "perspective-origin:  0  ";
             var property = ParseDeclaration(snippet);
@@ -90,7 +90,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveOriginLengthLegal()
+        public void PerspectiveOriginLengthLegal()
         {
             var snippet = "perspective-origin:  20px  ";
             var property = ParseDeclaration(snippet);
@@ -104,7 +104,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveOriginLeftLegal()
+        public void PerspectiveOriginLeftLegal()
         {
             var snippet = "perspective-origin:  left  ";
             var property = ParseDeclaration(snippet);
@@ -118,7 +118,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveOriginPercentLegal()
+        public void PerspectiveOriginPercentLegal()
         {
             var snippet = "perspective-origin:  15%  ";
             var property = ParseDeclaration(snippet);
@@ -132,7 +132,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveOriginPercentPercentLegal()
+        public void PerspectiveOriginPercentPercentLegal()
         {
             var snippet = "perspective-origin:  15% 25% ";
             var property = ParseDeclaration(snippet);
@@ -146,7 +146,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveOriginLeftCenterLegal()
+        public void PerspectiveOriginLeftCenterLegal()
         {
             var snippet = "perspective-origin:  left center ";
             var property = ParseDeclaration(snippet);
@@ -160,7 +160,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveOriginRightBottomLegal()
+        public void PerspectiveOriginRightBottomLegal()
         {
             var snippet = "perspective-origin:  right BOTTOM ";
             var property = ParseDeclaration(snippet);
@@ -174,7 +174,7 @@
         }
 
         [Fact]
-        public void CssPerspectiveOriginTopCenterLegal()
+        public void PerspectiveOriginTopCenterLegal()
         {
             var snippet = "perspective-origin:  top center ";
             var property = ParseDeclaration(snippet);
@@ -188,7 +188,7 @@
         }
 
         [Fact]
-        public void CssTransformStylePreserve3DLegal()
+        public void TransformStylePreserve3DLegal()
         {
             var snippet = "transform-style:  preserve-3d ";
             var property = ParseDeclaration(snippet);
@@ -203,7 +203,7 @@
         }
 
         [Fact]
-        public void CssTransformStyleNoneIllegal()
+        public void TransformStyleNoneIllegal()
         {
             var snippet = "transform-style:  none ";
             var property = ParseDeclaration(snippet);
@@ -216,7 +216,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginXOffsetLegal()
+        public void TransformOriginXOffsetLegal()
         {
             var snippet = "transform-origin:  2px ";
             var property = ParseDeclaration(snippet);
@@ -230,7 +230,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginXOffsetKeywordLegal()
+        public void TransformOriginXOffsetKeywordLegal()
         {
             var snippet = "transform-origin:  bottom ";
             var property = ParseDeclaration(snippet);
@@ -244,7 +244,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginYOffsetLegal()
+        public void TransformOriginYOffsetLegal()
         {
             var snippet = "transform-origin:  3cm 2px";
             var property = ParseDeclaration(snippet);
@@ -258,7 +258,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginYOffsetXKeywordLegal()
+        public void TransformOriginYOffsetXKeywordLegal()
         {
             var snippet = "transform-origin:  2px left";
             var property = ParseDeclaration(snippet);
@@ -272,7 +272,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginXKeywordYOffsetLegal()
+        public void TransformOriginXKeywordYOffsetLegal()
         {
             var snippet = "transform-origin:  left 2px ";
             var property = ParseDeclaration(snippet);
@@ -286,7 +286,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginXKeywordYKeywordLegal()
+        public void TransformOriginXKeywordYKeywordLegal()
         {
             var snippet = "transform-origin:  right top ";
             var property = ParseDeclaration(snippet);
@@ -300,7 +300,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginYKeywordXKeywordLegal()
+        public void TransformOriginYKeywordXKeywordLegal()
         {
             var snippet = "transform-origin:  top  right ";
             var property = ParseDeclaration(snippet);
@@ -314,7 +314,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginXYZLegal()
+        public void TransformOriginXYZLegal()
         {
             var snippet = "transform-origin:  2px 30% 10px ";
             var property = ParseDeclaration(snippet);
@@ -328,7 +328,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginYXKeywordZLegal()
+        public void TransformOriginYXKeywordZLegal()
         {
             var snippet = "transform-origin:  2px left 10px ";
             var property = ParseDeclaration(snippet);
@@ -342,7 +342,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginXKeywordYZLegal()
+        public void TransformOriginXKeywordYZLegal()
         {
             var snippet = "transform-origin:  left 5px -3px ";
             var property = ParseDeclaration(snippet);
@@ -356,7 +356,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginXKeywordYKeywordZLegal()
+        public void TransformOriginXKeywordYKeywordZLegal()
         {
             var snippet = "transform-origin:  right bottom 2cm ";
             var property = ParseDeclaration(snippet);
@@ -370,7 +370,7 @@
         }
 
         [Fact]
-        public void CssTransformOriginYKeywordXKeywordZLegal()
+        public void TransformOriginYKeywordXKeywordZLegal()
         {
             var snippet = "transform-origin:  bottom  right  2cm ";
             var property = ParseDeclaration(snippet);
@@ -384,7 +384,7 @@
         }
 
         [Fact]
-        public void CssTransformNoneLegal()
+        public void TransformNoneLegal()
         {
             var snippet = "transform:  none ";
             var property = ParseDeclaration(snippet);
@@ -398,7 +398,7 @@
         }
 
         [Fact]
-        public void CssTransformMatrixLegal()
+        public void TransformMatrixLegal()
         {
             var snippet = "transform:  matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0) ";
             var property = ParseDeclaration(snippet);
@@ -412,7 +412,7 @@
         }
 
         [Fact]
-        public void CssTransformTranslateLegal()
+        public void TransformTranslateLegal()
         {
             var snippet = "transform:  translate(12px, 50%) ";
             var property = ParseDeclaration(snippet);
@@ -426,7 +426,7 @@
         }
 
         [Fact]
-        public void CssTransformTranslateXLegal()
+        public void TransformTranslateXLegal()
         {
             var snippet = "transform:  translateX(2em) ";
             var property = ParseDeclaration(snippet);
@@ -440,7 +440,7 @@
         }
 
         [Fact]
-        public void CssTransformTranslateYLegal()
+        public void TransformTranslateYLegal()
         {
             var snippet = "transform:  translateY(3in) ";
             var property = ParseDeclaration(snippet);
@@ -454,7 +454,7 @@
         }
 
         [Fact]
-        public void CssTransformScaleLegal()
+        public void TransformScaleLegal()
         {
             var snippet = "transform:  scale(2, 0.5) ";
             var property = ParseDeclaration(snippet);
@@ -468,7 +468,7 @@
         }
 
         [Fact]
-        public void CssTransformScaleXLegal()
+        public void TransformScaleXLegal()
         {
             var snippet = "transform:  scaleX(0.1) ";
             var property = ParseDeclaration(snippet);
@@ -482,7 +482,7 @@
         }
 
         [Fact]
-        public void CssTransformScaleYLegal()
+        public void TransformScaleYLegal()
         {
             var snippet = "transform:  scaleY(1.5) ";
             var property = ParseDeclaration(snippet);
@@ -496,7 +496,7 @@
         }
 
         [Fact]
-        public void CssTransformRotateLegal()
+        public void TransformRotateLegal()
         {
             var snippet = "transform:  rotate(0.5turn) ";
             var property = ParseDeclaration(snippet);
@@ -510,7 +510,7 @@
         }
 
         [Fact]
-        public void CssTransformSkewXLegal()
+        public void TransformSkewXLegal()
         {
             var snippet = "transform:  skewX(  30deg  ) ";
             var property = ParseDeclaration(snippet);
@@ -524,7 +524,7 @@
         }
 
         [Fact]
-        public void CssTransformSkewYLegal()
+        public void TransformSkewYLegal()
         {
             var snippet = "transform:  skewY(  1.07rad  ) ";
             var property = ParseDeclaration(snippet);
@@ -538,7 +538,7 @@
         }
 
         [Fact]
-        public void CssTransformMultipleLegal()
+        public void TransformMultipleLegal()
         {
             var snippet = "transform:  translate(50%, 50%) rotate(45deg) scale(1.5)";
             var property = ParseDeclaration(snippet);
@@ -554,7 +554,7 @@
         }
 
         [Fact]
-        public void CssTransformMatrix3dLegal()
+        public void TransformMatrix3dLegal()
         {
             var snippet = "transform:  matrix3d(1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0)";
             var property = ParseDeclaration(snippet);
@@ -571,7 +571,7 @@
         }
 
         [Fact]
-        public void CssTransformTranslate3dLegal()
+        public void TransformTranslate3dLegal()
         {
             var snippet = "transform:  translate3d(12px, 50%, 3em)";
             var property = ParseDeclaration(snippet);
@@ -588,7 +588,7 @@
         }
 
         [Fact]
-        public void CssTransformTranslateZLegal()
+        public void TransformTranslateZLegal()
         {
             var snippet = "transform:  translateZ(2px)";
             var property = ParseDeclaration(snippet);
@@ -605,7 +605,7 @@
         }
 
         [Fact]
-        public void CssTransformScale3dLegal()
+        public void TransformScale3dLegal()
         {
             var snippet = "transform:  scale3d(2.5, 1.2, 0.3)";
             var property = ParseDeclaration(snippet);
@@ -622,7 +622,7 @@
         }
 
         [Fact]
-        public void CssTransformScaleZLegal()
+        public void TransformScaleZLegal()
         {
             var snippet = "transform:  scaleZ(0.3)";
             var property = ParseDeclaration(snippet);
@@ -639,7 +639,7 @@
         }
 
         [Fact]
-        public void CssTransformRotate3dLegal()
+        public void TransformRotate3dLegal()
         {
             var snippet = "transform:  rotate3d(1, 2.0, 3.0, 10deg)";
             var property = ParseDeclaration(snippet);
@@ -656,7 +656,7 @@
         }
 
         [Fact]
-        public void CssTransformRotateXLegal()
+        public void TransformRotateXLegal()
         {
             var snippet = "transform:  rotateX(10deg)";
             var property = ParseDeclaration(snippet);
@@ -673,7 +673,7 @@
         }
 
         [Fact]
-        public void CssTransformRotateYLegal()
+        public void TransformRotateYLegal()
         {
             var snippet = "transform:  rotateY(10deg)";
             var property = ParseDeclaration(snippet);
@@ -690,7 +690,7 @@
         }
 
         [Fact]
-        public void CssTransformRotateZLegal()
+        public void TransformRotateZLegal()
         {
             var snippet = "transform: rotateZ(10deg)";
             var property = ParseDeclaration(snippet);
@@ -707,7 +707,7 @@
         }
 
         [Fact]
-        public void CssTransformPerspectiveLegal()
+        public void TransformPerspectiveLegal()
         {
             var snippet = "transform: perspective(17px)";
             var property = ParseDeclaration(snippet);

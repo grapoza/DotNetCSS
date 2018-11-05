@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssColumnsPropertyTests : CssConstructionFunctions
+    public class ColumnsPropertyTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssColumnWidthLengthLegal()
+        public void ColumnWidthLengthLegal()
         {
             var snippet = "column-width: 300px";
             var property = ParseDeclaration(snippet);
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CssColumnWidthPercentIllegal()
+        public void ColumnWidthPercentIllegal()
         {
             var snippet = "column-width: 30%";
             var property = ParseDeclaration(snippet);
@@ -34,7 +34,7 @@
         }
 
         [Fact]
-        public void CssColumnWidthVwLegal()
+        public void ColumnWidthVwLegal()
         {
             var snippet = "column-width: 0.3vw";
             var property = ParseDeclaration(snippet);
@@ -48,7 +48,7 @@
         }
 
         [Fact]
-        public void CssColumnWidthAutoUppercaseLegal()
+        public void ColumnWidthAutoUppercaseLegal()
         {
             var snippet = "column-width: AUTO";
             var property = ParseDeclaration(snippet);
@@ -62,7 +62,7 @@
         }
 
         [Fact]
-        public void CssColumnCountAutoLowercaseLegal()
+        public void ColumnCountAutoLowercaseLegal()
         {
             var snippet = "column-count: auto";
             var property = ParseDeclaration(snippet);
@@ -76,7 +76,7 @@
         }
 
         [Fact]
-        public void CssColumnCountNumberLegal()
+        public void ColumnCountNumberLegal()
         {
             var snippet = "column-count: 3";
             var property = ParseDeclaration(snippet);
@@ -90,7 +90,7 @@
         }
 
         [Fact]
-        public void CssColumnCountZeroLegal()
+        public void ColumnCountZeroLegal()
         {
             var snippet = "column-count: 0";
             var property = ParseDeclaration(snippet);
@@ -104,7 +104,7 @@
         }
 
         [Fact]
-        public void CssColumsZeroLegal()
+        public void ColumnsZeroLegal()
         {
             var snippet = "columns: 0";
             var property = ParseDeclaration(snippet);
@@ -118,7 +118,7 @@
         }
 
         [Fact]
-        public void CssColumsLengthLegal()
+        public void ColumnsLengthLegal()
         {
             var snippet = "columns: 10px";
             var property = ParseDeclaration(snippet);
@@ -132,7 +132,7 @@
         }
 
         [Fact]
-        public void CssColumsNumberLegal()
+        public void ColumnsNumberLegal()
         {
             var snippet = "columns: 4";
             var property = ParseDeclaration(snippet);
@@ -146,7 +146,7 @@
         }
 
         [Fact]
-        public void CssColumsLengthNumberLegal()
+        public void ColumnsLengthNumberLegal()
         {
             var snippet = "columns: 25em 5";
             var property = ParseDeclaration(snippet);
@@ -160,7 +160,7 @@
         }
 
         [Fact]
-        public void CssColumsNumberLengthLegal()
+        public void ColumnsNumberLengthLegal()
         {
             var snippet = "columns : 5   25em  ";
             var property = ParseDeclaration(snippet);
@@ -174,7 +174,7 @@
         }
 
         [Fact]
-        public void CssColumsAutoAutoLegal()
+        public void ColumnsAutoAutoLegal()
         {
             var snippet = "columns : auto auto";
             var property = ParseDeclaration(snippet);
@@ -188,7 +188,7 @@
         }
 
         [Fact]
-        public void CssColumsAutoLegal()
+        public void ColumnsAutoLegal()
         {
             var snippet = "columns : auto  ";
             var property = ParseDeclaration(snippet);
@@ -202,7 +202,7 @@
         }
 
         [Fact]
-        public void CssColumsNumberPercenIllegal()
+        public void ColumnsNumberPercenIllegal()
         {
             var snippet = "columns : 5   25%  ";
             var property = ParseDeclaration(snippet);
@@ -215,7 +215,7 @@
         }
 
         [Fact]
-        public void CssColumSpanAllLegal()
+        public void ColumnSpanAllLegal()
         {
             var snippet = "column-span: all";
             var property = ParseDeclaration(snippet);
@@ -229,7 +229,7 @@
         }
 
         [Fact]
-        public void CssColumSpanNoneUppercaseLegal()
+        public void ColumnSpanNoneUppercaseLegal()
         {
             var snippet = "column-span: None";
             var property = ParseDeclaration(snippet);
@@ -243,7 +243,7 @@
         }
 
         [Fact]
-        public void CssColumSpanLengthIllegal()
+        public void ColumnSpanLengthIllegal()
         {
             var snippet = "column-span: 10px";
             var property = ParseDeclaration(snippet);
@@ -256,7 +256,7 @@
         }
 
         [Fact]
-        public void CssColumGapLengthLegal()
+        public void ColumnGapLengthLegal()
         {
             var snippet = "column-gap: 20px";
             var property = ParseDeclaration(snippet);
@@ -270,7 +270,7 @@
         }
 
         [Fact]
-        public void CssColumGapNormalLegal()
+        public void ColumnGapNormalLegal()
         {
             var snippet = "column-gap: normal";
             var property = ParseDeclaration(snippet);
@@ -284,7 +284,7 @@
         }
 
         [Fact]
-        public void CssColumGapZeroLegal()
+        public void ColumnGapZeroLegal()
         {
             var snippet = "column-gap: 0";
             var property = ParseDeclaration(snippet);
@@ -298,7 +298,7 @@
         }
 
         [Fact]
-        public void CssColumGapPercentIllegal()
+        public void ColumnGapPercentIllegal()
         {
             var snippet = "column-gap: 20%";
             var property = ParseDeclaration(snippet);
@@ -311,7 +311,7 @@
         }
 
         [Fact]
-        public void CssColumFillBalanceLegal()
+        public void ColumnFillBalanceLegal()
         {
             var snippet = "column-fill: balance;";
             var property = ParseDeclaration(snippet);
@@ -325,7 +325,7 @@
         }
 
         [Fact]
-        public void CssColumFillAutoLegal()
+        public void ColumnFillAutoLegal()
         {
             var snippet = "column-fill: auto;";
             var property = ParseDeclaration(snippet);
@@ -339,7 +339,7 @@
         }
 
         [Fact]
-        public void CssColumRuleColorTransparentLegal()
+        public void ColumnRuleColorTransparentLegal()
         {
             var snippet = "column-rule-color: transparent";
             var property = ParseDeclaration(snippet);
@@ -353,7 +353,7 @@
         }
 
         [Fact]
-        public void CssColumRuleColorRgbLegal()
+        public void ColumnRuleColorRgbLegal()
         {
             var snippet = "column-rule-color: rgb(192, 56, 78)";
             var property = ParseDeclaration(snippet);
@@ -367,7 +367,7 @@
         }
 
         [Fact]
-        public void CssColumRuleColorRedLegal()
+        public void ColumnRuleColorRedLegal()
         {
             var snippet = "column-rule-color: red";
             var property = ParseDeclaration(snippet);
@@ -381,7 +381,7 @@
         }
 
         [Fact]
-        public void CssColumRuleColorNoneIllegal()
+        public void ColumnRuleColorNoneIllegal()
         {
             var snippet = "column-rule-color: none";
             var property = ParseDeclaration(snippet);
@@ -394,7 +394,7 @@
         }
 
         [Fact]
-        public void CssColumRuleStyleInsetTailUpperLegal()
+        public void ColumnRuleStyleInsetTailUpperLegal()
         {
             var snippet = "column-rule-style: inSET";
             var property = ParseDeclaration(snippet);
@@ -408,7 +408,7 @@
         }
 
         [Fact]
-        public void CssColumRuleStyleNoneLegal()
+        public void ColumnRuleStyleNoneLegal()
         {
             var snippet = "column-rule-style: none";
             var property = ParseDeclaration(snippet);
@@ -422,7 +422,7 @@
         }
 
         [Fact]
-        public void CssColumRuleStyleAutoIllegal()
+        public void ColumnRuleStyleAutoIllegal()
         {
             var snippet = "column-rule-style: auto ";
             var property = ParseDeclaration(snippet);
@@ -435,7 +435,7 @@
         }
 
         [Fact]
-        public void CssColumRuleWidthLengthLegal()
+        public void ColumnRuleWidthLengthLegal()
         {
             var snippet = "column-rule-width: 2px";
             var property = ParseDeclaration(snippet);
@@ -449,7 +449,7 @@
         }
 
         [Fact]
-        public void CssColumRuleWidthThickLegal()
+        public void ColumnRuleWidthThickLegal()
         {
             var snippet = "column-rule-width: thick";
             var property = ParseDeclaration(snippet);
@@ -463,7 +463,7 @@
         }
 
         [Fact]
-        public void CssColumRuleWidthMediumLegal()
+        public void ColumnRuleWidthMediumLegal()
         {
             var snippet = "column-rule-width : medium !important ";
             var property = ParseDeclaration(snippet);
@@ -477,7 +477,7 @@
         }
 
         [Fact]
-        public void CssColumRuleWidthThinUppercaseLegal()
+        public void ColumnRuleWidthThinUppercaseLegal()
         {
             var snippet = "column-rule-width: THIN";
             var property = ParseDeclaration(snippet);
@@ -491,7 +491,7 @@
         }
 
         [Fact]
-        public void CssColumRuleDottedLegal()
+        public void ColumnRuleDottedLegal()
         {
             var snippet = "column-rule: dotted";
             var property = ParseDeclaration(snippet);
@@ -505,7 +505,7 @@
         }
 
         [Fact]
-        public void CssColumRuleSolidBlueLegal()
+        public void ColumnRuleSolidBlueLegal()
         {
             var snippet = "column-rule: solid  blue";
             var property = ParseDeclaration(snippet);
@@ -519,7 +519,7 @@
         }
 
         [Fact]
-        public void CssColumRuleSolidLengthLegal()
+        public void ColumnRuleSolidLengthLegal()
         {
             var snippet = "column-rule: solid 8px";
             var property = ParseDeclaration(snippet);
@@ -533,7 +533,7 @@
         }
 
         [Fact]
-        public void CssColumRuleThickInsetBlueLegal()
+        public void ColumnRuleThickInsetBlueLegal()
         {
             var snippet = "column-rule: thick inset blue";
             var property = ParseDeclaration(snippet);

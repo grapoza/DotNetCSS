@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssListPropertyTests : CssConstructionFunctions
+    public class ListPropertyTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssListStylePositionOutsideLegal()
+        public void ListStylePositionOutsideLegal()
         {
             var snippet = "list-style-position: outside ";
             var property = ParseDeclaration(snippet);
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CssListStylePositionOutsideIllegal()
+        public void ListStylePositionOutsideIllegal()
         {
             var snippet = "list-style-position: out-side ";
             var property = ParseDeclaration(snippet);
@@ -34,7 +34,7 @@
         }
 
         [Fact]
-        public void CssListStylePositionNoneIllegal()
+        public void ListStylePositionNoneIllegal()
         {
             var snippet = "list-style-position: none ";
             var property = ParseDeclaration(snippet);
@@ -47,7 +47,7 @@
         }
 
         [Fact]
-        public void CssListStylePositionInsideLegal()
+        public void ListStylePositionInsideLegal()
         {
             var snippet = "list-style-position: insiDe ";
             var property = ParseDeclaration(snippet);
@@ -61,7 +61,7 @@
         }
 
         [Fact]
-        public void CssListStyleImageNoneLegal()
+        public void ListStyleImageNoneLegal()
         {
             var snippet = "list-style-image: none ";
             var property = ParseDeclaration(snippet);
@@ -75,7 +75,7 @@
         }
 
         [Fact]
-        public void CssListStyleImageUrlLegal()
+        public void ListStyleImageUrlLegal()
         {
             var snippet = "list-style-image: url(http://www.example.com/images/list.png)";
             var property = ParseDeclaration(snippet);
@@ -89,7 +89,7 @@
         }
 
         [Fact]
-        public void CssListStyleTypeDiscLegal()
+        public void ListStyleTypeDiscLegal()
         {
             var snippet = "list-style-type: disc ";
             var property = ParseDeclaration(snippet);
@@ -103,7 +103,7 @@
         }
 
         [Fact]
-        public void CssListStyleTypeLowerAlphaLegal()
+        public void ListStyleTypeLowerAlphaLegal()
         {
             var snippet = "list-style-type: lower-ALPHA ";
             var property = ParseDeclaration(snippet);
@@ -117,7 +117,7 @@
         }
 
         [Fact]
-        public void CssListStyleTypeGeorgianLegal()
+        public void ListStyleTypeGeorgianLegal()
         {
             var snippet = "list-style-type: georgian ";
             var property = ParseDeclaration(snippet);
@@ -131,7 +131,7 @@
         }
 
         [Fact]
-        public void CssListStyleTypeDecimalLeadingZeroLegal()
+        public void ListStyleTypeDecimalLeadingZeroLegal()
         {
             var snippet = "list-style-type: decimal-leading-zerO ";
             var property = ParseDeclaration(snippet);
@@ -145,7 +145,7 @@
         }
 
         [Fact]
-        public void CssListStyleTypeNumberIllegal()
+        public void ListStyleTypeNumberIllegal()
         {
             var snippet = "list-style-type: number ";
             var property = ParseDeclaration(snippet);
@@ -158,7 +158,7 @@
         }
 
         [Fact]
-        public void CssListStyleCircleLegal()
+        public void ListStyleCircleLegal()
         {
             var snippet = "list-style: circle ";
             var property = ParseDeclaration(snippet);
@@ -172,7 +172,7 @@
         }
 
         [Fact]
-        public void CssListStyleNone()
+        public void ListStyleNone()
         {
             var snippet = "list-style: none";
             var property = ParseDeclaration(snippet);
@@ -186,7 +186,7 @@
         }
 
         [Fact]
-        public void CssListStyleSquareInsideLegal()
+        public void ListStyleSquareInsideLegal()
         {
             var snippet = "list-style: square inside ";
             var property = ParseDeclaration(snippet);
@@ -200,7 +200,7 @@
         }
 
         [Fact]
-        public void CssListStyleSquareImageInsideLegal()
+        public void ListStyleSquareImageInsideLegal()
         {
             var snippet = "list-style: square url('image.png') inside ";
             var property = ParseDeclaration(snippet);
@@ -214,7 +214,7 @@
         }
 
         [Fact]
-        public void CssCounterResetLegal()
+        public void CounterResetLegal()
         {
             var snippet = "counter-reset: chapter section 1 page;";
             var property = ParseDeclaration(snippet);
@@ -228,7 +228,7 @@
         }
 
         [Fact]
-        public void CssCounterResetSingleLegal()
+        public void CounterResetSingleLegal()
         {
             var snippet = "counter-reset: counter-name";
             var property = ParseDeclaration(snippet);
@@ -242,7 +242,7 @@
         }
 
         [Fact]
-        public void CssCounterResetNoneLegal()
+        public void CounterResetNoneLegal()
         {
             var snippet = "counter-reset: none";
             var property = ParseDeclaration(snippet);
@@ -256,7 +256,7 @@
         }
 
         [Fact]
-        public void CssCounterResetNumberIllegal()
+        public void CounterResetNumberIllegal()
         {
             var snippet = "counter-reset: 3";
             var property = ParseDeclaration(snippet);
@@ -269,7 +269,7 @@
         }
 
         [Fact]
-        public void CssCounterResetNegativeLegal()
+        public void CounterResetNegativeLegal()
         {
             var snippet = "counter-reset  :  counter-name   -1";
             var property = ParseDeclaration(snippet);
@@ -283,7 +283,7 @@
         }
 
         [Fact]
-        public void CssCounterResetTwoCountersExplicitLegal()
+        public void CounterResetTwoCountersExplicitLegal()
         {
             var snippet = "counter-reset  :  counter1   1   counter2   4  ";
             var property = ParseDeclaration(snippet);
@@ -297,7 +297,7 @@
         }
 
         [Fact]
-        public void CssCounterIncrementNoneLegal()
+        public void CounterIncrementNoneLegal()
         {
             var snippet = "counter-increment: none";
             var property = ParseDeclaration(snippet);
@@ -311,7 +311,7 @@
         }
 
         [Fact]
-        public void CssCounterIncrementLegal()
+        public void CounterIncrementLegal()
         {
             var snippet = "counter-increment: chapter section 2 page";
             var property = ParseDeclaration(snippet);

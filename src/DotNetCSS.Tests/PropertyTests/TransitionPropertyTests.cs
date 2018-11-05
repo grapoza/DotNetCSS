@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssTransitionPropertyTests : CssConstructionFunctions
+    public class TransitionPropertyTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssTransitionPropertyNoneLegal()
+        public void TransitionPropertyNoneLegal()
         {
             var snippet = "transition-property : none";
             var property = ParseDeclaration(snippet);
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CssTransitionPropertyAllLegal()
+        public void TransitionPropertyAllLegal()
         {
             var snippet = "transition-property : ALL";
             var property = ParseDeclaration(snippet);
@@ -35,7 +35,7 @@
         }
 
         [Fact]
-        public void CssTransitionPropertyWidthHeightLegal()
+        public void TransitionPropertyWidthHeightLegal()
         {
             var snippet = "transition-property : width   , height";
             var property = ParseDeclaration(snippet);
@@ -49,7 +49,7 @@
         }
 
         [Fact]
-        public void CssTransitionPropertyDashSpecificIllegal()
+        public void TransitionPropertyDashSpecificIllegal()
         {
             var snippet = "transition-property : -specific";
             var property = ParseDeclaration(snippet);
@@ -62,7 +62,7 @@
         }
 
         [Fact]
-        public void CssTransitionPropertySlidingVerticallyIllegal()
+        public void TransitionPropertySlidingVerticallyIllegal()
         {
             var snippet = "transition-property : sliding-vertically";
             var property = ParseDeclaration(snippet);
@@ -75,7 +75,7 @@
         }
 
         [Fact]
-        public void CssTransitionPropertyTest05Illegal()
+        public void TransitionPropertyTest05Illegal()
         {
             var snippet = "transition-property : test_05";
             var property = ParseDeclaration(snippet);
@@ -88,7 +88,7 @@
         }
 
         [Fact]
-        public void CssTransitionTimingFunctionEaseLegal()
+        public void TransitionTimingFunctionEaseLegal()
         {
             var snippet = "transition-timing-function : ease";
             var property = ParseDeclaration(snippet);
@@ -102,7 +102,7 @@
         }
 
         [Fact]
-        public void CssTransitionTimingFunctionEaseInLegal()
+        public void TransitionTimingFunctionEaseInLegal()
         {
             var snippet = "transition-timing-function : ease-IN";
             var property = ParseDeclaration(snippet);
@@ -116,7 +116,7 @@
         }
 
         [Fact]
-        public void CssTransitionTimingFunctionStepStartLegal()
+        public void TransitionTimingFunctionStepStartLegal()
         {
             var snippet = "transition-timing-function : step-start";
             var property = ParseDeclaration(snippet);
@@ -130,7 +130,7 @@
         }
 
         [Fact]
-        public void CssTransitionTimingFunctionStepStartStepEndLegal()
+        public void TransitionTimingFunctionStepStartStepEndLegal()
         {
             var snippet = "transition-timing-function : step-start  , step-end";
             var property = ParseDeclaration(snippet);
@@ -144,7 +144,7 @@
         }
 
         [Fact]
-        public void CssTransitionTimingFunctionStepStartStepEndLinearEaseInOutLegal()
+        public void TransitionTimingFunctionStepStartStepEndLinearEaseInOutLegal()
         {
             var snippet = "transition-timing-function : step-start  , step-end,linear,ease-IN-OUT";
             var property = ParseDeclaration(snippet);
@@ -158,7 +158,7 @@
         }
 
         [Fact]
-        public void CssTransitionTimingFunctionCubicBezierLegal()
+        public void TransitionTimingFunctionCubicBezierLegal()
         {
             var snippet = "transition-timing-function : cubic-bezier(0, 1, 0.5, 1)";
             var property = ParseDeclaration(snippet);
@@ -172,7 +172,7 @@
         }
 
         [Fact]
-        public void CssTransitionTimingFunctionStepsStartLegal()
+        public void TransitionTimingFunctionStepsStartLegal()
         {
             var snippet = "transition-timing-function : steps(10, start)";
             var property = ParseDeclaration(snippet);
@@ -186,7 +186,7 @@
         }
 
         [Fact]
-        public void CssTransitionTimingFunctionStepsEndLegal()
+        public void TransitionTimingFunctionStepsEndLegal()
         {
             var snippet = "transition-timing-function : steps(25, end)";
             var property = ParseDeclaration(snippet);
@@ -200,7 +200,7 @@
         }
 
         [Fact]
-        public void CssTransitionTimingFunctionStepsLinearCubicBezierLegal()
+        public void TransitionTimingFunctionStepsLinearCubicBezierLegal()
         {
             var snippet = "transition-timing-function : steps(25), linear, cubic-bezier(0.25, 1, 0.5, 1)";
             var property = ParseDeclaration(snippet);
@@ -214,7 +214,7 @@
         }
 
         [Fact]
-        public void CssTransitionDurationSecondsLegal()
+        public void TransitionDurationSecondsLegal()
         {
             var snippet = "transition-duration : 6s";
             var property = ParseDeclaration(snippet);
@@ -228,7 +228,7 @@
         }
 
         [Fact]
-        public void CssTransitionDurationMillisecondsLegal()
+        public void TransitionDurationMillisecondsLegal()
         {
             var snippet = "transition-duration : 60ms";
             var property = ParseDeclaration(snippet);
@@ -242,7 +242,7 @@
         }
 
         [Fact]
-        public void CssTransitionDurationMillisecondsSecondsSecondsLegal()
+        public void TransitionDurationMillisecondsSecondsSecondsLegal()
         {
             var snippet = "transition-duration : 60ms, 1s, 2s";
             var property = ParseDeclaration(snippet);
@@ -256,7 +256,7 @@
         }
 
         [Fact]
-        public void CssTransitionDelayMillisecondsLegal()
+        public void TransitionDelayMillisecondsLegal()
         {
             var snippet = "transition-delay : 60ms";
             var property = ParseDeclaration(snippet);
@@ -270,7 +270,7 @@
         }
 
         [Fact]
-        public void CssTransitionDelayMillisecondsSecondsSecondsLegal()
+        public void TransitionDelayMillisecondsSecondsSecondsLegal()
         {
             var snippet = "transition-delay : 60ms, 1s, 2s";
             var property = ParseDeclaration(snippet);
@@ -284,7 +284,7 @@
         }
 
         [Fact]
-        public void CssTransitionMillisecondsSecondsSecondsLegal()
+        public void TransitionMillisecondsSecondsSecondsLegal()
         {
             var snippet = "transition : 60ms, 1s, 2s";
             var property = ParseDeclaration(snippet);
@@ -298,7 +298,7 @@
         }
 
         [Fact]
-        public void CssTransitionStepsLinearCubicBezierLegal()
+        public void TransitionStepsLinearCubicBezierLegal()
         {
             var snippet = "transition : steps(25), linear, cubic-bezier(0.25, 1, 0.5, 1)";
             var property = ParseDeclaration(snippet);
@@ -312,7 +312,7 @@
         }
 
         [Fact]
-        public void CssTransitionWidthHeightLegal()
+        public void TransitionWidthHeightLegal()
         {
             var snippet = "transition : width   , height";
             var property = ParseDeclaration(snippet);
@@ -326,7 +326,7 @@
         }
 
         [Fact]
-        public void CssTransitionEaseLegal()
+        public void TransitionEaseLegal()
         {
             var snippet = "transition : ease";
             var property = ParseDeclaration(snippet);
@@ -340,7 +340,7 @@
         }
 
         [Fact]
-        public void CssTransitionSecondsEaseAllLegal()
+        public void TransitionSecondsEaseAllLegal()
         {
             var snippet = "transition : all 1s ease";
             var property = ParseDeclaration(snippet);
@@ -354,7 +354,7 @@
         }
 
         [Fact]
-        public void CssTransitionSecondsEaseAllHeightMsStepsLegal()
+        public void TransitionSecondsEaseAllHeightMsStepsLegal()
         {
             var snippet = "transition : all 1s ease, height steps(5) 50ms";
             var property = ParseDeclaration(snippet);
@@ -368,7 +368,7 @@
         }
 
         [Fact]
-        public void CssTransitionSecondsEaseAllHeightMsStepsWidthCubicBezierLegal()
+        public void TransitionSecondsEaseAllHeightMsStepsWidthCubicBezierLegal()
         {
             var snippet = "transition : all 1s ease, height step-start 50ms,width,cubic-bezier(0.2,0.5 , 1  ,  1)";
             var property = ParseDeclaration(snippet);

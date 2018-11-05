@@ -5,10 +5,10 @@
     using System.Linq;
 
     //[TestFixture]
-    public class CssDocumentFunctionTests : CssConstructionFunctions
+    public class DocumentFunctionTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssDocumentRuleSingleUrlFunction()
+        public void DocumentRuleSingleUrlFunction()
         {
             var snippet = "@document url(http://www.w3.org/) { }";
             var rule = ParseRule(snippet) as DocumentRule;
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CssDocumentRuleSingleUrlPrefixFunction()
+        public void DocumentRuleSingleUrlPrefixFunction()
         {
             var snippet = "@document url-prefix(http://www.w3.org/Style/) { }";
             var rule = ParseRule(snippet) as DocumentRule;
@@ -34,7 +34,7 @@
         }
 
         [Fact]
-        public void CssDocumentRuleSingleDomainFunction()
+        public void DocumentRuleSingleDomainFunction()
         {
             var snippet = "@document domain('mozilla.org') { }";
             var rule = ParseRule(snippet) as DocumentRule;
@@ -47,7 +47,7 @@
         }
 
         [Fact]
-        public void CssDocumentRuleSingleRegexpFunction()
+        public void DocumentRuleSingleRegexpFunction()
         {
             var snippet = "@document regexp(\"https:.*\") { }";
             var rule = ParseRule(snippet) as DocumentRule;
@@ -60,7 +60,7 @@
         }
 
         [Fact]
-        public void CssDocumentRuleMultipleFunctions()
+        public void DocumentRuleMultipleFunctions()
         {
             var snippet = "@document url(http://www.w3.org/), url-prefix(http://www.w3.org/Style/), domain(mozilla.org), regexp(\"https:.*\") { }";
             var rule = ParseRule(snippet) as DocumentRule;
