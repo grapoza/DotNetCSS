@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssOutlinePropertyTests : CssConstructionFunctions
+    public class OutlinePropertyTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssOutlineStyleDottedLegal()
+        public void OutlineStyleDottedLegal()
         {
             var snippet = "outline-style   :  dotTED";
             var property = ParseDeclaration(snippet);
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CssOutlineStyleSolidLegal()
+        public void OutlineStyleSolidLegal()
         {
             var snippet = "outline-style   :  solid";
             var property = ParseDeclaration(snippet);
@@ -35,7 +35,7 @@
         }
 
         [Fact]
-        public void CssOutlineStyleNoIllegal()
+        public void OutlineStyleNoIllegal()
         {
             var snippet = "outline-style   :  no";
             var property = ParseDeclaration(snippet);
@@ -48,7 +48,7 @@
         }
 
         [Fact]
-        public void CssOutlineColorInvertLegal()
+        public void OutlineColorInvertLegal()
         {
             var snippet = "outline-color :  invert ";
             var property = ParseDeclaration(snippet);
@@ -62,7 +62,7 @@
         }
 
         [Fact]
-        public void CssOutlineColorHslLegal()
+        public void OutlineColorHslLegal()
         {
             var snippet = "outline-color :  hsl(320, 80%, 50%) ";//equivalent to rgba(229, 26, 161, 1)
             var property = ParseDeclaration(snippet);
@@ -76,7 +76,7 @@
         }
 
         [Fact]
-        public void CssOutlineColorHexLegal()
+        public void OutlineColorHexLegal()
         {
             var snippet = "outline-color :  #0000FF ";
             var property = ParseDeclaration(snippet);
@@ -90,7 +90,7 @@
         }
 
         [Fact]
-        public void CssOutlineColorRedLegal()
+        public void OutlineColorRedLegal()
         {
             var snippet = "outline-color :  red ";
             var property = ParseDeclaration(snippet);
@@ -104,7 +104,7 @@
         }
 
         [Fact]
-        public void CssOutlineColorIllegal()
+        public void OutlineColorIllegal()
         {
             var snippet = "outline-color :  blau ";
             var property = ParseDeclaration(snippet);
@@ -117,7 +117,7 @@
         }
 
         [Fact]
-        public void CssOutlineWidthThinImportantLegal()
+        public void OutlineWidthThinImportantLegal()
         {
             var snippet = "outline-width :  thin !important";
             var property = ParseDeclaration(snippet);
@@ -131,7 +131,7 @@
         }
 
         [Fact]
-        public void CssOutlineWidthNumberIllegal()
+        public void OutlineWidthNumberIllegal()
         {
             var snippet = "outline-width :  3";
             var property = ParseDeclaration(snippet);
@@ -144,7 +144,7 @@
         }
 
         [Fact]
-        public void CssOutlineWidthLengthLegal()
+        public void OutlineWidthLengthLegal()
         {
             var snippet = "outline-width :  0.1em";
             var property = ParseDeclaration(snippet);
@@ -159,7 +159,7 @@
         }
 
         [Fact]
-        public void CssOutlineSingleLegal()
+        public void OutlineSingleLegal()
         {
             var snippet = "outline :  thin";
             var property = ParseDeclaration(snippet);
@@ -173,7 +173,7 @@
         }
 
         [Fact]
-        public void CssOutlineDualLegal()
+        public void OutlineDualLegal()
         {
             var snippet = "outline :  thin   invert";
             var property = ParseDeclaration(snippet);
@@ -187,7 +187,7 @@
         }
 
         [Fact]
-        public void CssOutlineAllDottedLegal()
+        public void OutlineAllDottedLegal()
         {
             var snippet = "outline :  dotted 0.3em rgb(255, 255, 255)";
             var property = ParseDeclaration(snippet);
@@ -201,7 +201,7 @@
         }
 
         [Fact]
-        public void CssOutlineDoubleColorIllegal()
+        public void OutlineDoubleColorIllegal()
         {
             var snippet = "outline :  dotted #123456 rgb(255, 255, 255)";
             var property = ParseDeclaration(snippet);
@@ -214,7 +214,7 @@
         }
 
         [Fact]
-        public void CssOutlineAllSolidLegal()
+        public void OutlineAllSolidLegal()
         {
             var snippet = "outline :  1px solid #000";
             var property = ParseDeclaration(snippet);
@@ -228,7 +228,7 @@
         }
 
         [Fact]
-        public void CssOutlineAllColorNamedLegal()
+        public void OutlineAllColorNamedLegal()
         {
             var snippet = "outline :  solid black 1px";
             var property = ParseDeclaration(snippet);

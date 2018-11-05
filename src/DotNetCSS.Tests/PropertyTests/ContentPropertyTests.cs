@@ -5,7 +5,7 @@
     using System;
 
     //[TestFixture]
-    public class CssContentPropertyTests
+    public class ContentPropertyTests
     {
         static StyleRule Parse(string source)
         {
@@ -15,7 +15,7 @@
         }
 
         [Fact]
-        public void CssContentParseStringWithDoubleQuoteEscape()
+        public void ContentParseStringWithDoubleQuoteEscape()
         {
             var source = "a{content:\"\\\"\"}";
             var parsed = Parse(source);
@@ -23,7 +23,7 @@
         }
 
         [Fact]
-        public void CssContentParseStringWithSingleQuoteEscape()
+        public void ContentParseStringWithSingleQuoteEscape()
         {
             var source = "a{content:'\\''}";
             var parsed = Parse(source);
@@ -31,7 +31,7 @@
         }
 
         [Fact]
-        public void CssContentParseStringWithDoubleQuoteMultipleEscapes()
+        public void ContentParseStringWithDoubleQuoteMultipleEscapes()
         {
             var source = "a{content:\"abc\\\"\\\"d\\\"ef\"}";
             var parsed = Parse(source);
@@ -39,7 +39,7 @@
         }
 
         [Fact]
-        public void CssContentParseStringWithSingleQuoteMultipleEscapes()
+        public void ContentParseStringWithSingleQuoteMultipleEscapes()
         {
             var source = "a{content:'abc\\'\\'d\\'ef'}";
             var parsed = Parse(source);

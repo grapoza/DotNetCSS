@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssPaddingPropertyTests : CssConstructionFunctions
+    public class PaddingPropertyTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssPaddingLeftLengthLegal()
+        public void PaddingLeftLengthLegal()
         {
             var snippet = "padding-left: 15px ";
             var property = ParseDeclaration(snippet);
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CssPaddingRightLengthImportantLegal()
+        public void PaddingRightLengthImportantLegal()
         {
             var snippet = "padding-right: 3em!important";
             var property = ParseDeclaration(snippet);
@@ -35,7 +35,7 @@
         }
 
         [Fact]
-        public void CssPaddingTopPercentLegal()
+        public void PaddingTopPercentLegal()
         {
             var snippet = "padding-top: 4% ";
             var property = ParseDeclaration(snippet);
@@ -49,7 +49,7 @@
         }
 
         [Fact]
-        public void CssPaddingBottomZeroLegal()
+        public void PaddingBottomZeroLegal()
         {
             var snippet = "padding-bottom: 0 ";
             var property = ParseDeclaration(snippet);
@@ -63,7 +63,7 @@
         }
 
         [Fact]
-        public void CssPaddingAllZeroLegal()
+        public void PaddingAllZeroLegal()
         {
             var snippet = "padding: 0 ";
             var property = ParseDeclaration(snippet);
@@ -77,7 +77,7 @@
         }
 
         [Fact]
-        public void CssPaddingAllPercentLegal()
+        public void PaddingAllPercentLegal()
         {
             var snippet = "padding: 25% ";
             var property = ParseDeclaration(snippet);
@@ -91,7 +91,7 @@
         }
 
         [Fact]
-        public void CssPaddingSidesLengthLegal()
+        public void PaddingSidesLengthLegal()
         {
             var snippet = "padding: 10px 3em ";
             var property = ParseDeclaration(snippet);
@@ -105,7 +105,7 @@
         }
 
         [Fact]
-        public void CssPaddingAutoIllegal()
+        public void PaddingAutoIllegal()
         {
             var snippet = "padding: auto ";
             var property = ParseDeclaration(snippet);
@@ -118,7 +118,7 @@
         }
 
         [Fact]
-        public void CssPaddingThreeValuesLegal()
+        public void PaddingThreeValuesLegal()
         {
             var snippet = "padding: 10px 3em 5px";
             var property = ParseDeclaration(snippet);
@@ -132,7 +132,7 @@
         }
 
         [Fact]
-        public void CssPaddingAllValuesWithPercentLegal()
+        public void PaddingAllValuesWithPercentLegal()
         {
             var snippet = "padding: 10px 5% 8px 2% ";
             var property = ParseDeclaration(snippet);
@@ -146,7 +146,7 @@
         }
 
         [Fact]
-        public void CssPaddingTooManyValuesIllegal()
+        public void PaddingTooManyValuesIllegal()
         {
             var snippet = "padding: 10px 5% 8px 2% 3px";
             var property = ParseDeclaration(snippet);
@@ -159,7 +159,7 @@
         }
 
         [Fact]
-        public void CssPaddingShouldBeRecombinedCorrectly()
+        public void PaddingShouldBeRecombinedCorrectly()
         {
             var snippet = ".centered {padding-bottom: 2em; padding-top: 2.5em; padding-left: 0; padding-right: 0}";
             var expected = ".centered { padding: 2.5em 0 2em }";

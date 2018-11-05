@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssObjectSizingTests : CssConstructionFunctions
+    public class ObjectSizingTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssObjectFitNoneLegal()
+        public void ObjectFitNoneLegal()
         {
             var snippet = "object-fit : none";
             var property = ParseDeclaration(snippet);
@@ -54,7 +54,7 @@
         }
 
         [Fact]
-        public void CssObjectFitCoverLegal()
+        public void ObjectFitCoverLegal()
         {
             var snippet = "object-fit : cover";
             var property = ParseDeclaration(snippet);
@@ -70,7 +70,7 @@
         }
 
         [Fact]
-        public void CssObjectFitContainLegal()
+        public void ObjectFitContainLegal()
         {
             var snippet = "object-fit : contain";
             var property = ParseDeclaration(snippet);
@@ -86,7 +86,7 @@
         }
 
         [Fact]
-        public void CssObjectPositionCenterLegal()
+        public void ObjectPositionCenterLegal()
         {
             var snippet = "object-position : center";
             var property = ParseDeclaration(snippet);
@@ -130,7 +130,7 @@
         }
 
         [Fact]
-        public void CssObjectPosition5050Legal()
+        public void ObjectPosition5050Legal()
         {
             var snippet = "object-position : 50%   50% ";
             var property = ParseDeclaration(snippet);
@@ -145,7 +145,7 @@
         }
 
         [Fact]
-        public void CssObjectPositionLeft30Legal()
+        public void ObjectPositionLeft30Legal()
         {
             var snippet = "object-position : left  30px";
             var property = ParseDeclaration(snippet);

@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssFontPropertyTests : CssConstructionFunctions
+    public class FontPropertyTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssFontFamilyMultipleWithIdentifiersLegal()
+        public void FontFamilyMultipleWithIdentifiersLegal()
         {
             var snippet = "font-family: Gill Sans Extrabold, sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyInitialLegal()
+        public void FontFamilyInitialLegal()
         {
             var snippet = "font-family: initial ";
             var property = ParseDeclaration(snippet);
@@ -35,7 +35,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyMultipleDiverseLegal()
+        public void FontFamilyMultipleDiverseLegal()
         {
             var snippet = "font-family: Courier, \"Lucida Console\", monospace ";
             var property = ParseDeclaration(snippet);
@@ -49,7 +49,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyMultipleStringLegal()
+        public void FontFamilyMultipleStringLegal()
         {
             var snippet = "font-family: \"Goudy Bookletter 1911\", sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -63,7 +63,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyMultipleNumberIllegal()
+        public void FontFamilyMultipleNumberIllegal()
         {
             var snippet = "font-family: Goudy Bookletter 1911, sans-serif  ";
             var property = ParseDeclaration(snippet);
@@ -76,7 +76,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyMultipleFractionIllegal()
+        public void FontFamilyMultipleFractionIllegal()
         {
             var snippet = "font-family: Red/Black, sans-serif  ";
             var property = ParseDeclaration(snippet);
@@ -89,7 +89,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyMultipleStringMixedWithIdentifierIllegal()
+        public void FontFamilyMultipleStringMixedWithIdentifierIllegal()
         {
             var snippet = "font-family: \"Lucida\" Grande, sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -102,7 +102,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyMultipleExclamationMarkIllegal()
+        public void FontFamilyMultipleExclamationMarkIllegal()
         {
             var snippet = "font-family: Ahem!, sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -115,7 +115,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyMultipleAtIllegal()
+        public void FontFamilyMultipleAtIllegal()
         {
             var snippet = "font-family: test@foo, sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -128,7 +128,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyHashIllegal()
+        public void FontFamilyHashIllegal()
         {
             var snippet = "font-family: #POUND ";
             var property = ParseDeclaration(snippet);
@@ -141,7 +141,7 @@
         }
 
         [Fact]
-        public void CssFontFamilyDashIllegal()
+        public void FontFamilyDashIllegal()
         {
             var snippet = "font-family: Hawaii 5-0 ";
             var property = ParseDeclaration(snippet);
@@ -154,7 +154,7 @@
         }
 
         [Fact]
-        public void CssFontVariantNormalUppercaseLegal()
+        public void FontVariantNormalUppercaseLegal()
         {
             var snippet = "font-variant : NORMAL";
             var property = ParseDeclaration(snippet);
@@ -168,7 +168,7 @@
         }
 
         [Fact]
-        public void CssFontVariantSmallCapsLegal()
+        public void FontVariantSmallCapsLegal()
         {
             var snippet = "font-variant : small-caps ";
             var property = ParseDeclaration(snippet);
@@ -182,7 +182,7 @@
         }
 
         [Fact]
-        public void CssFontVariantSmallCapsIllegal()
+        public void FontVariantSmallCapsIllegal()
         {
             var snippet = "font-variant : smallCaps ";
             var property = ParseDeclaration(snippet);
@@ -195,7 +195,7 @@
         }
 
         [Fact]
-        public void CssFontStyleItalicLegal()
+        public void FontStyleItalicLegal()
         {
             var snippet = "font-style : italic";
             var property = ParseDeclaration(snippet);
@@ -209,7 +209,7 @@
         }
 
         [Fact]
-        public void CssFontStyleObliqueLegal()
+        public void FontStyleObliqueLegal()
         {
             var snippet = "font-style : oblique ";
             var property = ParseDeclaration(snippet);
@@ -223,7 +223,7 @@
         }
 
         [Fact]
-        public void CssFontStyleNormalImportantLegal()
+        public void FontStyleNormalImportantLegal()
         {
             var snippet = "font-style : normal !important";
             var property = ParseDeclaration(snippet);
@@ -237,7 +237,7 @@
         }
 
         [Fact]
-        public void CssFontSizeAbsoluteImportantXxSmallLegal()
+        public void FontSizeAbsoluteImportantXxSmallLegal()
         {
             var snippet = "font-size : xx-small !important";
             var property = ParseDeclaration(snippet);
@@ -251,7 +251,7 @@
         }
 
         [Fact]
-        public void CssFontSizeAbsoluteMediumUppercaseLegal()
+        public void FontSizeAbsoluteMediumUppercaseLegal()
         {
             var snippet = "font-size : medium";
             var property = ParseDeclaration(snippet);
@@ -265,7 +265,7 @@
         }
 
         [Fact]
-        public void CssFontSizeAbsoluteLargeImportantLegal()
+        public void FontSizeAbsoluteLargeImportantLegal()
         {
             var snippet = "font-size : large !important";
             var property = ParseDeclaration(snippet);
@@ -279,7 +279,7 @@
         }
 
         [Fact]
-        public void CssFontSizeRelativeLargerLegal()
+        public void FontSizeRelativeLargerLegal()
         {
             var snippet = "font-size : larger ";
             var property = ParseDeclaration(snippet);
@@ -293,7 +293,7 @@
         }
 
         [Fact]
-        public void CssFontSizeRelativeLargestIllegal()
+        public void FontSizeRelativeLargestIllegal()
         {
             var snippet = "font-size : largest ";
             var property = ParseDeclaration(snippet);
@@ -306,7 +306,7 @@
         }
 
         [Fact]
-        public void CssFontSizePercentLegal()
+        public void FontSizePercentLegal()
         {
             var snippet = "font-size : 120% ";
             var property = ParseDeclaration(snippet);
@@ -320,7 +320,7 @@
         }
 
         [Fact]
-        public void CssFontSizeZeroLegal()
+        public void FontSizeZeroLegal()
         {
             var snippet = "font-size : 0 ";
             var property = ParseDeclaration(snippet);
@@ -334,7 +334,7 @@
         }
 
         [Fact]
-        public void CssFontSizeLengthLegal()
+        public void FontSizeLengthLegal()
         {
             var snippet = "font-size : 3.5em ";
             var property = ParseDeclaration(snippet);
@@ -348,7 +348,7 @@
         }
 
         [Fact]
-        public void CssFontSizeNumberIllegal()
+        public void FontSizeNumberIllegal()
         {
             var snippet = "font-size : 120.3 ";
             var property = ParseDeclaration(snippet);
@@ -361,7 +361,7 @@
         }
 
         [Fact]
-        public void CssFontWeightPercentllegal()
+        public void FontWeightPercentllegal()
         {
             var snippet = "font-weight : 100% ";
             var property = ParseDeclaration(snippet);
@@ -374,7 +374,7 @@
         }
 
         [Fact]
-        public void CssFontWeightBolderLegalImportant()
+        public void FontWeightBolderLegalImportant()
         {
             var snippet = "font-weight : bolder !important";
             var property = ParseDeclaration(snippet);
@@ -388,7 +388,7 @@
         }
 
         [Fact]
-        public void CssFontWeightBoldLegal()
+        public void FontWeightBoldLegal()
         {
             var snippet = "font-weight : bold";
             var property = ParseDeclaration(snippet);
@@ -402,7 +402,7 @@
         }
 
         [Fact]
-        public void CssFontWeight400Legal()
+        public void FontWeight400Legal()
         {
             var snippet = "font-weight : 400 ";
             var property = ParseDeclaration(snippet);
@@ -416,7 +416,7 @@
         }
 
         [Fact]
-        public void CssFontStretchNormalUppercaseImportantLegal()
+        public void FontStretchNormalUppercaseImportantLegal()
         {
             var snippet = "font-stretch : NORMAL !important";
             var property = ParseDeclaration(snippet);
@@ -430,7 +430,7 @@
         }
 
         [Fact]
-        public void CssFontStretchExtraCondensedLegal()
+        public void FontStretchExtraCondensedLegal()
         {
             var snippet = "font-stretch : extra-condensed ";
             var property = ParseDeclaration(snippet);
@@ -444,7 +444,7 @@
         }
 
         [Fact]
-        public void CssFontStretchSemiExpandedSpaceBetweenIllegal()
+        public void FontStretchSemiExpandedSpaceBetweenIllegal()
         {
             var snippet = "font-stretch : semi expanded ";
             var property = ParseDeclaration(snippet);
@@ -457,7 +457,7 @@
         }
 
         [Fact]
-        public void CssFontShorthandWithFractionLegal()
+        public void FontShorthandWithFractionLegal()
         {
             var snippet = "font : 12px/14px sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -471,7 +471,7 @@
         }
 
         [Fact]
-        public void CssFontShorthandPercentLegal()
+        public void FontShorthandPercentLegal()
         {
             var snippet = "font : 80% sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -485,7 +485,7 @@
         }
 
         [Fact]
-        public void CssFontShorthandBoldItalicLargeLegal()
+        public void FontShorthandBoldItalicLargeLegal()
         {
             var snippet = "font : bold italic large serif ";
             var property = ParseDeclaration(snippet);
@@ -499,7 +499,7 @@
         }
 
         [Fact]
-        public void CssFontShorthandPredefinedLegal()
+        public void FontShorthandPredefinedLegal()
         {
             var snippet = "font : status-bar ";
             var property = ParseDeclaration(snippet);
@@ -513,7 +513,7 @@
         }
 
         [Fact]
-        public void CssFontShorthandSizeAndFontListLegal()
+        public void FontShorthandSizeAndFontListLegal()
         {
             var snippet = "font : 15px arial,sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -527,7 +527,7 @@
         }
 
         [Fact]
-        public void CssFontShorthandStyleWeightSizeLineHeightAndFontListLegal()
+        public void FontShorthandStyleWeightSizeLineHeightAndFontListLegal()
         {
             var snippet = "font : italic bold 12px/30px Georgia, serif";
             var property = ParseDeclaration(snippet);
@@ -541,7 +541,7 @@
         }
 
         [Fact]
-        public void CssLetterSpacingLengthPxLegal()
+        public void LetterSpacingLengthPxLegal()
         {
             var snippet = "letter-spacing: 3px ";
             var property = ParseDeclaration(snippet);
@@ -555,7 +555,7 @@
         }
 
         [Fact]
-        public void CssLetterSpacingLengthFloatPxLegal()
+        public void LetterSpacingLengthFloatPxLegal()
         {
             var snippet = "letter-spacing: .3px ";
             var property = ParseDeclaration(snippet);
@@ -569,7 +569,7 @@
         }
 
         [Fact]
-        public void CssLetterSpacingLengthFloatEmLegal()
+        public void LetterSpacingLengthFloatEmLegal()
         {
             var snippet = "letter-spacing: 0.3em ";
             var property = ParseDeclaration(snippet);
@@ -583,7 +583,7 @@
         }
 
         [Fact]
-        public void CssLetterSpacingNormalLegal()
+        public void LetterSpacingNormalLegal()
         {
             var snippet = "letter-spacing: normal ";
             var property = ParseDeclaration(snippet);
@@ -597,7 +597,7 @@
         }
 
         [Fact]
-        public void CssFontSizeAdjustNoneLegal()
+        public void FontSizeAdjustNoneLegal()
         {
             var snippet = "font-size-adjust : NONE";
             var property = ParseDeclaration(snippet);
@@ -611,7 +611,7 @@
         }
 
         [Fact]
-        public void CssFontSizeAdjustNumberLegal()
+        public void FontSizeAdjustNumberLegal()
         {
             var snippet = "font-size-adjust : 0.5";
             var property = ParseDeclaration(snippet);
@@ -625,7 +625,7 @@
         }
 
         [Fact]
-        public void CssFontSizeAdjustLengthIllegal()
+        public void FontSizeAdjustLengthIllegal()
         {
             var snippet = "font-size-adjust : 1.1em ";
             var property = ParseDeclaration(snippet);
@@ -638,7 +638,7 @@
         }
 
         [Fact]
-        public void CssFontSizeHeightFamilyLegal()
+        public void FontSizeHeightFamilyLegal()
         {
             var snippet = "font: 12pt/14pt sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -652,7 +652,7 @@
         }
 
         [Fact]
-        public void CssFontSizeFamilyLegal()
+        public void FontSizeFamilyLegal()
         {
             var snippet = "font: 80% sans-serif ";
             var property = ParseDeclaration(snippet);
@@ -666,7 +666,7 @@
         }
 
         [Fact]
-        public void CssFontSizeHeightMultipleFamiliesLegal()
+        public void FontSizeHeightMultipleFamiliesLegal()
         {
             var snippet = "font: x-large/110% 'New Century Schoolbook', serif ";
             var property = ParseDeclaration(snippet);
@@ -680,7 +680,7 @@
         }
 
         [Fact]
-        public void CssFontWeightVariantSizeFamiliesLegal()
+        public void FontWeightVariantSizeFamiliesLegal()
         {
             var snippet = "font: bold italic large Palatino, serif ";
             var property = ParseDeclaration(snippet);
@@ -694,7 +694,7 @@
         }
 
         [Fact]
-        public void CssFontStyleVariantSizeHeightFamilyLegal()
+        public void FontStyleVariantSizeHeightFamilyLegal()
         {
             var snippet = "font: normal small-caps 120%/120% Fantasy ";
             var property = ParseDeclaration(snippet);
@@ -708,7 +708,7 @@
         }
 
         [Fact]
-        public void CssFontStyleVariantSizeFamiliesLegal()
+        public void FontStyleVariantSizeFamiliesLegal()
         {
             var snippet = "font: condensed oblique 12pt \"Helvetica Neue\", serif ";
             var property = ParseDeclaration(snippet);
@@ -722,7 +722,7 @@
         }
 
         [Fact]
-        public void CssFontSystemFamilyLegal()
+        public void FontSystemFamilyLegal()
         {
             var snippet = "font: status-bar ";
             var property = ParseDeclaration(snippet);
@@ -736,7 +736,7 @@
         }
 
         [Fact]
-        public void CssFontFaceWithThreeRulesShouldSerializeCorrectly()
+        public void FontFaceWithThreeRulesShouldSerializeCorrectly()
         {
             var snippet = @"@font-face {
         font-family: FrutigerLTStd;
@@ -749,7 +749,7 @@
         }
 
         [Fact]
-        public void CssFontFaceWithTwoRulesShouldSerializeCorrectly()
+        public void FontFaceWithTwoRulesShouldSerializeCorrectly()
         {
             var snippet = @"@font-face {
         font-family: FrutigerLTStd;
@@ -761,7 +761,7 @@
         }
 
         [Fact]
-        public void CssFontFaceWithOneRuleShouldSerializeCorrectly()
+        public void FontFaceWithOneRuleShouldSerializeCorrectly()
         {
             var snippet = @"@font-face {
         font-family: FrutigerLTStd;
@@ -772,7 +772,7 @@
         }
 
         [Fact]
-        public void CssFontStyleWeightSizeHeightFamiliesLegal()
+        public void FontStyleWeightSizeHeightFamiliesLegal()
         {
             var snippet = "font: italic bold 12px/30px Georgia, serif";
             var property = ParseDeclaration(snippet);

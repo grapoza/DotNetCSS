@@ -6,7 +6,7 @@ namespace DotNetCSS.Tests
     using System.Linq;
 
 	//[TestFixture]
-	public class CssCasesTests : CssConstructionFunctions
+	public class CasesTests : CssConstructionFunctions
 	{
         static Stylesheet ParseSheet(string text)
         {

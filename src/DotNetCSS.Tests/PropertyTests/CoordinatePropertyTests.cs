@@ -5,10 +5,10 @@
     using System.Linq;
 
     //[TestFixture]
-    public class CssCoordinatePropertyTests : CssConstructionFunctions
+    public class CoordinatePropertyTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssHeightLegalPercentage()
+        public void HeightLegalPercentage()
         {
             var snippet = "height:   28% ";
             var property = ParseDeclaration(snippet);
@@ -23,7 +23,7 @@
         }
 
         [Fact]
-        public void CssHeightLegalLengthInEm()
+        public void HeightLegalLengthInEm()
         {
             var snippet = "height:   0.3em ";
             var property = ParseDeclaration(snippet);
@@ -38,7 +38,7 @@
         }
 
         [Fact]
-        public void CssHeightLegalLengthInPx()
+        public void HeightLegalLengthInPx()
         {
             var snippet = "height:   144px ";
             var property = ParseDeclaration(snippet);
@@ -53,7 +53,7 @@
         }
 
         [Fact]
-        public void CssHeightLegalAutoUppercase()
+        public void HeightLegalAutoUppercase()
         {
             var snippet = "height: AUTO ";
             var property = ParseDeclaration(snippet);
@@ -67,7 +67,7 @@
         }
 
         [Fact]
-        public void CssWidthLegalLengthInCm()
+        public void WidthLegalLengthInCm()
         {
             var snippet = "width:0.5cm";
             var property = ParseDeclaration(snippet);
@@ -82,7 +82,7 @@
         }
 
         [Fact]
-        public void CssWidthLegalLengthInMm()
+        public void WidthLegalLengthInMm()
         {
             var snippet = "width:1.5mm";
             var property = ParseDeclaration(snippet);
@@ -97,7 +97,7 @@
         }
 
         [Fact]
-        public void CssWidthIllegalLength()
+        public void WidthIllegalLength()
         {
             var snippet = "width:1.5 meter";
             var property = ParseDeclaration(snippet);
@@ -111,7 +111,7 @@
         }
 
         [Fact]
-        public void CssLeftLegalPixel()
+        public void LeftLegalPixel()
         {
             var snippet = "left: 25px";
             var property = ParseDeclaration(snippet);
@@ -124,7 +124,7 @@
         }
 
         [Fact]
-        public void CssTopLegalEm()
+        public void TopLegalEm()
         {
             var snippet = "top:  0.7em ";
             var property = ParseDeclaration(snippet);
@@ -137,7 +137,7 @@
         }
 
         [Fact]
-        public void CssRightLegalMm()
+        public void RightLegalMm()
         {
             var snippet = "right:  1.5mm";
             var property = ParseDeclaration(snippet);
@@ -150,7 +150,7 @@
         }
 
         [Fact]
-        public void CssBottomFoundInStyleDeclaration()
+        public void BottomFoundInStyleDeclaration()
         {
             var snippet = "bottom:  50%";
             var style = ParseDeclarations(snippet);
@@ -161,7 +161,7 @@
         }
 
         [Fact]
-        public void CssBottomLegalPercent()
+        public void BottomLegalPercent()
         {
             var snippet = "bottom:  50%";
             var property = ParseDeclaration(snippet);
@@ -174,7 +174,7 @@
         }
 
         [Fact]
-        public void CssHeightZeroLegal()
+        public void HeightZeroLegal()
         {
             var snippet = "height:0";
             var property = ParseDeclaration(snippet);
@@ -187,7 +187,7 @@
         }
 
         [Fact]
-        public void CssWidthZeroLegal()
+        public void WidthZeroLegal()
         {
             var snippet = "width  :  0";
             var property = ParseDeclaration(snippet);
@@ -200,7 +200,7 @@
         }
 
         [Fact]
-        public void CssWidthPercentLegal()
+        public void WidthPercentLegal()
         {
             var snippet = "width  :  20.5%";
             var property = ParseDeclaration(snippet);
@@ -213,7 +213,7 @@
         }
 
         [Fact]
-        public void CssWidthPercentInLegal()
+        public void WidthPercentInLegal()
         {
             var snippet = "width  :  3in";
             var property = ParseDeclaration(snippet);
@@ -225,7 +225,7 @@
         }
 
         [Fact]
-        public void CssHeightAngleIllegal()
+        public void HeightAngleIllegal()
         {
             var snippet = "height  :  3deg";
             var property = ParseDeclaration(snippet);
@@ -238,7 +238,7 @@
         }
 
         [Fact]
-        public void CssHeightResolutionIllegal()
+        public void HeightResolutionIllegal()
         {
             var snippet = "height  :  3dpi";
             var property = ParseDeclaration(snippet);
@@ -251,7 +251,7 @@
         }
 
         [Fact]
-        public void CssTopLegalRem()
+        public void TopLegalRem()
         {
             var snippet = "top:  1.2rem ";
             var property = ParseDeclaration(snippet);
@@ -264,7 +264,7 @@
         }
 
         [Fact]
-        public void CssRightLegalCm()
+        public void RightLegalCm()
         {
             var snippet = "right:  0.5cm";
             var property = ParseDeclaration(snippet);
@@ -277,7 +277,7 @@
         }
 
         [Fact]
-        public void CssBottomLegalPercentTwo()
+        public void BottomLegalPercentTwo()
         {
             var snippet = "bottom:  0.50%";
             var property = ParseDeclaration(snippet);
@@ -290,7 +290,7 @@
         }
 
         [Fact]
-        public void CssBottomLegalZero()
+        public void BottomLegalZero()
         {
             var snippet = "bottom:  0";
             var property = ParseDeclaration(snippet);
@@ -303,7 +303,7 @@
         }
 
         [Fact]
-        public void CssBottomIllegalNumber()
+        public void BottomIllegalNumber()
         {
             var snippet = "bottom:  20";
             var property = ParseDeclaration(snippet);
@@ -316,7 +316,7 @@
         }
 
         [Fact]
-        public void CssMinHeightLegalZero()
+        public void MinHeightLegalZero()
         {
             var snippet = "min-height:  0";
             var property = ParseDeclaration(snippet);
@@ -329,7 +329,7 @@
         }
 
         [Fact]
-        public void CssMaxHeightIllegalAuto()
+        public void MaxHeightIllegalAuto()
         {
             var snippet = "max-height:  auto";
             var property = ParseDeclaration(snippet);
@@ -342,7 +342,7 @@
         }
 
         [Fact]
-        public void CssMaxWidthLegalNone()
+        public void MaxWidthLegalNone()
         {
             var snippet = "max-width:  none";
             var property = ParseDeclaration(snippet);
@@ -356,7 +356,7 @@
         }
 
         [Fact]
-        public void CssMaxWidthLegalLength()
+        public void MaxWidthLegalLength()
         {
             var snippet = "max-width:  15px";
             var property = ParseDeclaration(snippet);
@@ -370,7 +370,7 @@
         }
 
         [Fact]
-        public void CssMinWidthLegalPercent()
+        public void MinWidthLegalPercent()
         {
             var snippet = "min-width:  15%";
             var property = ParseDeclaration(snippet);

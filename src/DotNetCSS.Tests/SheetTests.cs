@@ -6,10 +6,10 @@
     using System.Linq;
 
     //[TestFixture]
-    public class CssSheetTests : CssConstructionFunctions
+    public class SheetTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssSheetOnEofDuringRuleWithoutSemicolon()
+        public void SheetOnEofDuringRuleWithoutSemicolon()
         {
             var sheet = ParseStyleSheet(@"
 h1 {
@@ -24,7 +24,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheet1WithDoubleMarkedCommentFromIssue93()
+        public void Sheet1WithDoubleMarkedCommentFromIssue93()
         {
             var sheet = ParseStyleSheet(@"
             /**special css**/
@@ -41,7 +41,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheet2WithDoubleMarkedCommentFromIssue93()
+        public void Sheet2WithDoubleMarkedCommentFromIssue93()
         {
             var sheet = ParseStyleSheet(@"
             /**special css**/
@@ -55,7 +55,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetSerializeListStyleNone()
+        public void SheetSerializeListStyleNone()
         {
             const string cssSrc = ".T1 {list-style:NONE}";
             const string expected = ".T1 { list-style: none }";
@@ -65,7 +65,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetSerializeBorder1pxOutset()
+        public void SheetSerializeBorder1pxOutset()
         {
             const string cssSrc = ".T2 { border:1px  outset }";
             const string expected = ".T2 { border: 1px outset }";
@@ -75,7 +75,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetSerializeBorder1pxSolidWithColor()
+        public void SheetSerializeBorder1pxSolidWithColor()
         {
             const string cssSrc = "#rule1 { border: 1px solid #BBCCEB; border-top: none }";
             const string expected = "#rule1 { border-right: 1px solid rgb(187, 204, 235); border-bottom: 1px solid rgb(187, 204, 235); border-left: 1px solid rgb(187, 204, 235); border-top: none }";
@@ -85,7 +85,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetSerializeBackgroundWithUrlPositionRepeatX()
+        public void SheetSerializeBackgroundWithUrlPositionRepeatX()
         {
             const string cssSrc = "#rule2 { background:url(/_static/img/bx_tile.gif) top left repeat-x; }";
             const string expected = "#rule2 { background: url(\"/_static/img/bx_tile.gif\") top left repeat-x }";
@@ -95,7 +95,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetIgnoreVendorPrefixes()
+        public void SheetIgnoreVendorPrefixes()
         {
             var css = @".something { 
   -o-border-radius: 5px;
@@ -116,7 +116,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetSimpleStyleRuleStringification()
+        public void SheetSimpleStyleRuleStringification()
         {
             var css = @"html { font-family: sans-serif }";
             var stylesheet = ParseStyleSheet(css);
@@ -127,7 +127,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetCloseStringsEndOfLine()
+        public void SheetCloseStringsEndOfLine()
         {
             var sheet = ParseStyleSheet(@"p {
         color: green;
@@ -145,7 +145,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetOnEofDuringRuleWithinString()
+        public void SheetOnEofDuringRuleWithinString()
         {
             var sheet = ParseStyleSheet(@"
 #something {
@@ -158,7 +158,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetOnEofDuringAtMediaRuleWithinString()
+        public void SheetOnEofDuringAtMediaRuleWithinString()
         {
             var sheet = ParseStyleSheet(@"  @media screen {
     p:before { content: 'Hello");
@@ -174,7 +174,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetIgnoreUnknownProperty()
+        public void SheetIgnoreUnknownProperty()
         {
             var sheet = ParseStyleSheet(@"h1 { color: red; rotation: 70minutes }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -187,28 +187,28 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetInvalidStatementRulesetUnexpectedAtKeyword()
+        public void SheetInvalidStatementRulesetUnexpectedAtKeyword()
         {
             var sheet = ParseStyleSheet(@"p @here {color: red}");
             Assert.Equal(0, sheet.Rules.Length);
         }
 
         [Fact]
-        public void CssSheetInvalidStatementAtRuleUnexpectedAtKeyword()
+        public void SheetInvalidStatementAtRuleUnexpectedAtKeyword()
         {
             var sheet = ParseStyleSheet(@"@foo @bar;");
             Assert.Equal(0, sheet.Rules.Length);
         }
 
         [Fact]
-        public void CssSheetInvalidStatementRulesetUnexpectedRightBrace()
+        public void SheetInvalidStatementRulesetUnexpectedRightBrace()
         {
             var sheet = ParseStyleSheet(@"}} {{ - }}");
             Assert.Equal(0, sheet.Rules.Length);
         }
 
         [Fact]
-        public void CssSheetInvalidStatementRulesetUnexpectedRightBraceWithValidQualifiedRule()
+        public void SheetInvalidStatementRulesetUnexpectedRightBraceWithValidQualifiedRule()
         {
             var sheet = ParseStyleSheet(@"}} {{ - }}
 #hi { color: green; }");
@@ -221,14 +221,14 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetInvalidStatementRulesetUnexpectedRightParenthesis()
+        public void SheetInvalidStatementRulesetUnexpectedRightParenthesis()
         {
             var sheet = ParseStyleSheet(@") ( {} ) p {color: red }");
             Assert.Equal(0, sheet.Rules.Length);
         }
 
         [Fact]
-        public void CssSheetInvalidStatementRulesetUnexpectedRightParenthesisWithValidQualifiedRule()
+        public void SheetInvalidStatementRulesetUnexpectedRightParenthesisWithValidQualifiedRule()
         {
             var sheet = ParseStyleSheet(@") {} p {color: green }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -240,7 +240,7 @@ h1 {
         }
 
         [Fact]
-        public void CssSheetIgnoreUnknownAtRule()
+        public void SheetIgnoreUnknownAtRule()
         {
             var sheet = ParseStyleSheet(@"@three-dee {
   @background-lighting {
@@ -260,7 +260,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetKeepValidValueFloat()
+        public void SheetKeepValidValueFloat()
         {
             var sheet = ParseStyleSheet(@"img { float: left }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -273,7 +273,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetIgnoreInvalidValueFloat()
+        public void SheetIgnoreInvalidValueFloat()
         {
             var sheet = ParseStyleSheet(@"img { float: left here }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -284,7 +284,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetIgnoreInvalidValueBackground()
+        public void SheetIgnoreInvalidValueBackground()
         {
             var sheet = ParseStyleSheet(@"img { background: ""red"" }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -295,7 +295,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetIgnoreInvalidValueBorderWidth()
+        public void SheetIgnoreInvalidValueBorderWidth()
         {
             var sheet = ParseStyleSheet(@"img { border-width: 3 }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -306,7 +306,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetWellformedDeclaration()
+        public void SheetWellformedDeclaration()
         {
             var sheet = ParseStyleSheet(@"p { color:green; }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -319,7 +319,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetMalformedDeclarationMissingColon()
+        public void SheetMalformedDeclarationMissingColon()
         {
             var sheet = ParseStyleSheet(@"p { color:green; color }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -332,7 +332,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetMalformedDeclarationMissingColonWithRecovery()
+        public void SheetMalformedDeclarationMissingColonWithRecovery()
         {
             var sheet = ParseStyleSheet(@"p { color:red;   color; color:green }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -345,7 +345,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetMalformedDeclarationMissingValue()
+        public void SheetMalformedDeclarationMissingValue()
         {
             var sheet = ParseStyleSheet(@"p { color:green; color: }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -358,7 +358,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetMalformedDeclarationUnexpectedTokens()
+        public void SheetMalformedDeclarationUnexpectedTokens()
         {
             var sheet = ParseStyleSheet(@"p { color:green; color{;color:maroon} }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -371,7 +371,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetMalformedDeclarationUnexpectedTokensWithRecovery()
+        public void SheetMalformedDeclarationUnexpectedTokensWithRecovery()
         {
             var sheet = ParseStyleSheet(@"p { color:red;   color{;color:maroon}; color:green }");
             Assert.Equal(1, sheet.Rules.Length);
@@ -384,7 +384,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssCreateValueListConformal()
+        public void CreateValueListConformal()
         {
             var valueString = "24px 12px 6px";
             var list = ParseValue(valueString);
@@ -397,7 +397,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssCreateValueListNonConformal()
+        public void CreateValueListNonConformal()
         {
             var valueString = "  24px  12px 6px  13px ";
             var list = ParseValue(valueString);
@@ -412,7 +412,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssCreateValueListEmpty()
+        public void CreateValueListEmpty()
         {
             var valueString = "";
             var value = ParseValue(valueString);
@@ -420,7 +420,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssCreateValueListSpaces()
+        public void CreateValueListSpaces()
         {
             var valueString = "  ";
             var value = ParseValue(valueString);
@@ -428,7 +428,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssCreateValueListIllegal()
+        public void CreateValueListIllegal()
         {
             var valueString = " , ";
             var list = ParseValue(valueString);
@@ -436,7 +436,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssCreateMultipleValues()
+        public void CreateMultipleValues()
         {
             var valueString = "Arial, Verdana, Helvetica, Sans-Serif";
             var list = ParseValue(valueString);
@@ -448,7 +448,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssCreateMultipleValueLists()
+        public void CreateMultipleValueLists()
         {
             var valueString = "Arial 10pt bold, Verdana 12pt italic";
             var list = ParseValue(valueString);
@@ -462,7 +462,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssCreateMultipleValuesNonConformal()
+        public void CreateMultipleValuesNonConformal()
         {
             var valueString = "  Arial  ,  Verdana  ,Helvetica,Sans-Serif   ";
             var list = ParseValue(valueString);
@@ -474,7 +474,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssColorBlack()
+        public void ColorBlack()
         {
             var valueString = "#000000";
             var value = ParseValue(valueString);
@@ -482,7 +482,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssColorRed()
+        public void ColorRed()
         {
             var valueString = "#FF0000";
             var value = ParseValue(valueString);
@@ -490,7 +490,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssColorMixedShort()
+        public void ColorMixedShort()
         {
             var valueString = "#07C";
             var value = ParseValue(valueString);
@@ -498,7 +498,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssColorGreenShort()
+        public void ColorGreenShort()
         {
             var valueString = "#00F";
             var value = ParseValue(valueString);
@@ -506,7 +506,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssColorRedShort()
+        public void ColorRedShort()
         {
             var valueString = "#F00";
             var value = ParseValue(valueString);
@@ -514,7 +514,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssRgbaFunction()
+        public void RgbaFunction()
         {
             var names = new[] { "border-top-color", "border-right-color", "border-bottom-color", "border-left-color" };
             var decls = ParseDeclarations("border-color: rgba(82, 168, 236, 0.8)");
@@ -536,7 +536,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssMarginAll()
+        public void MarginAll()
         {
             var names = new[] { "margin-top", "margin-right", "margin-bottom", "margin-left" };
             var decls = ParseDeclarations("margin: 20px;");
@@ -555,7 +555,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSeveralFontFamily()
+        public void SeveralFontFamily()
         {
             var prop = ParseDeclaration("font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif");
             Assert.Equal("font-family", prop.Name);
@@ -564,7 +564,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssFontWithSlashAndContent()
+        public void FontWithSlashAndContent()
         {
             var decl = ParseDeclarations("font: bold 1em/2em monospace; content: \" (\" attr(href) \")\"");
             Assert.NotNull(decl);
@@ -579,7 +579,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssBackgroundWebkitGradient()
+        public void BackgroundWebkitGradient()
         {
             var background = ParseDeclaration("background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFA84C), color-stop(100%, #FF7B0D))");
             Assert.NotNull(background);
@@ -589,7 +589,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssBackgroundColorRgba()
+        public void BackgroundColorRgba()
         {
             var background = ParseDeclaration("background-color: rgba(255, 123, 13, 1)");
             Assert.Equal("background-color", background.Name);
@@ -598,7 +598,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssFontWithFraction()
+        public void FontWithFraction()
         {
             var font = ParseDeclaration("font:bold 40px/1.13 'PT Sans Narrow', sans-serif");
             Assert.Equal("font", font.Name);
@@ -614,7 +614,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssBackgroundWithImage()
+        public void BackgroundWithImage()
         {
             var background = ParseDeclaration("background:url(../images/ribbon.svg) no-repeat");
             Assert.Equal("background", background.Name);
@@ -622,7 +622,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssContentWithCounter()
+        public void ContentWithCounter()
         {
             var content = ParseDeclaration("content:counter(paging, decimal-leading-zero)");
             Assert.Equal("content", content.Name);
@@ -630,7 +630,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssBackgroundColorRgb()
+        public void BackgroundColorRgb()
         {
             var backgroundColor = ParseDeclaration("background-color: rgb(245, 0, 111)");
             Assert.Equal("background-color", backgroundColor.Name);
@@ -638,7 +638,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssImportSheet()
+        public void ImportSheet()
         {
             var rule = "@import url(fonts.css);";
             var decl = ParseRule(rule);
@@ -649,7 +649,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssContentEscaped()
+        public void ContentEscaped()
         {
             var content = ParseDeclaration("content:'\005E'");
             Assert.Equal("content", content.Name);
@@ -657,7 +657,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssContentCounter()
+        public void ContentCounter()
         {
             var content = ParseDeclaration("content:counter(list)'.'");
             Assert.Equal("content", content.Name);
@@ -666,7 +666,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssTransformTranslate()
+        public void TransformTranslate()
         {
             var transform = ParseDeclaration("transform:translateY(-50%)");
             Assert.Equal("transform", transform.Name);
@@ -674,7 +674,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssBoxShadowMultiline()
+        public void BoxShadowMultiline()
         {
             var boxShadow = ParseDeclaration(@"
         box-shadow:
@@ -685,7 +685,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssDisplayBlock()
+        public void DisplayBlock()
         {
             var display = ParseDeclaration("display:block");
             Assert.Equal("display", display.Name);
@@ -694,7 +694,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetWithDataUrlAsBackgroundImage()
+        public void SheetWithDataUrlAsBackgroundImage()
         {
             var sheet = ParseStyleSheet(".App_Header_ .logo { background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAcCAMAAAAEJ1IZAAAABGdBTUEAALGPC/xhBQAAVAI/VAI/VAI/VAI/VAI/VAI/VAAAA////AI/VRZ0U8AAAAFJ0Uk5TYNV4S2UbgT/Gk6uQt585w2wGXS0zJO2lhGttJK6j4YqZSobH1AAAAAElFTkSuQmCC\"); background-size: 71px 28px; background-position: 0 19px; width: 71px; }");
             Assert.NotNull(sheet);
@@ -711,7 +711,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetFromStreamWeirdBytesLeadingToInfiniteLoop()
+        public void SheetFromStreamWeirdBytesLeadingToInfiniteLoop()
         {
             var bs = new byte[8];
             bs[0] = 239;
@@ -730,7 +730,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetFromStreamOnlyZerosAvailable()
+        public void SheetFromStreamOnlyZerosAvailable()
         {
             var bs = new byte[7180];
 
@@ -743,7 +743,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssSheetFromStringWithQuestionMarksLeadingToInfiniteLoop()
+        public void SheetFromStringWithQuestionMarksLeadingToInfiniteLoop()
         {
             var sheet = "U+???\0".ToCssStylesheet();
             Assert.NotNull(sheet);
@@ -751,7 +751,7 @@ h1 { color: blue }");
         }
 
         [Fact]
-        public void CssDefaultSheetSupportsRoundTripping()
+        public void DefaultSheetSupportsRoundTripping()
         {
             var originalSourceCode = @"p.info {
 	font-family: arial, sans-serif;
@@ -777,7 +777,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseSheetWithStyleMediaAndStyleRule()
+        public void ParseSheetWithStyleMediaAndStyleRule()
         {
             var sheet = ParseStyleSheet(@".mobile,.tablet{display:none;} @media only screen and(max-width:51.875em){.tablet{display:block;}} .disp {display:block;}");
             Assert.Equal(3, sheet.Rules.Length);
@@ -787,7 +787,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseSheetWithMediaAndTwoStyleRules()
+        public void ParseSheetWithMediaAndTwoStyleRules()
         {
             var sheet = ParseStyleSheet(@"@media only screen and(max-width:51.875em){.tablet{display:block;}} .mobile,.tablet{display:none;} .disp {display:block;}");
             Assert.Equal(3, sheet.Rules.Length);
@@ -797,7 +797,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseSheetWithTwoStyleAndMediaRule()
+        public void ParseSheetWithTwoStyleAndMediaRule()
         {
             var sheet = ParseStyleSheet(@".mobile,.tablet{display:none;} .disp {display:block;} @media only screen and(max-width:51.875em){.tablet{display:block;}}");
             Assert.Equal(3, sheet.Rules.Length);
@@ -807,7 +807,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseImportStatementWithNoMediaTextFollowedByStyle()
+        public void ParseImportStatementWithNoMediaTextFollowedByStyle()
         {
             var src = "@import url(import3.css); p { color : #f00; }";
             var sheet = ParseStyleSheet(src);
@@ -824,7 +824,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseMediaRuleWithInvalidMediumEntities()
+        public void ParseMediaRuleWithInvalidMediumEntities()
         {
             var src = "@media only screen and (min--moz-device-pixel-ratio:1.5),only screen and (-o-min-device-pixel-ratio:3/2),only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5){.favicon{background-image:url('../img/favicons-sprite32.png?v=1b9547cf9cee3350a5b4875951e3e552');background-size:16px 5634px}}";
             var sheet = ParseStyleSheet(src);
@@ -837,7 +837,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseStyleWithInvalidSurrogatePair()
+        public void ParseStyleWithInvalidSurrogatePair()
         {
             var src = @"span.berschrift2Zchn
 {mso-style-name:""\00DCberschrift 2 Zchn"";}";
@@ -853,7 +853,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseStyleWithValidEscapedUnicodeCodePoint()
+        public void ParseStyleWithValidEscapedUnicodeCodePoint()
         {
             var src = @"span.berschrift2Zchn
 {mso-style-name:""\00DC berschrift 2 Zchn"";}";
@@ -869,7 +869,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseMsViewPortWithoutOptions()
+        public void ParseMsViewPortWithoutOptions()
         {
             var css = "@-ms-viewport{width:device-width} .dsip { display: block; }";
             var doc = ParseStyleSheet(css);
@@ -878,7 +878,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseMsViewPortWithUnknownRules()
+        public void ParseMsViewPortWithUnknownRules()
         {
             var css = "@-ms-viewport{width:device-width} .dsip { display: block; }";
             var doc = ParseStyleSheet(css, true, true, true, true);
@@ -887,7 +887,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseMediaAndMsViewPortWithoutOptions()
+        public void ParseMediaAndMsViewPortWithoutOptions()
         {
             var css = "@media screen and (max-width: 400px) {  @-ms-viewport { width: 320px; }  }  .dsip { display: block; }";
             var doc = ParseStyleSheet(css);
@@ -896,7 +896,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssParseMediaAndMsViewPortWithUnknownRules()
+        public void ParseMediaAndMsViewPortWithUnknownRules()
         {
             var css = "@media screen and (max-width: 400px) {  @-ms-viewport { width: 320px; }  }  .dsip { display: block; }";
             var doc = ParseStyleSheet(css, true, true, true, true);
@@ -905,7 +905,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssStyleSheetInsertAndDeleteShouldWork()
+        public void StyleSheetInsertAndDeleteShouldWork()
         {
             var parser = new StylesheetParser();
 		    var s = new Stylesheet(parser);
@@ -925,7 +925,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssStyleSheetShouldIgnoreHtmlCommentTokens()
+        public void StyleSheetShouldIgnoreHtmlCommentTokens()
         {
             var parser = new StylesheetParser();
             var source = "<!-- body { font-family: Verdana } div.hidden { display: none } -->";
@@ -946,7 +946,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssStyleSheetInsertShouldSetParentStyleSheetCorrectly()
+        public void StyleSheetInsertShouldSetParentStyleSheetCorrectly()
         {
             var parser = new StylesheetParser();
             var s = new Stylesheet(parser);
@@ -955,7 +955,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssStyleSheetWithoutCommentsButStoringTrivia()
+        public void StyleSheetWithoutCommentsButStoringTrivia()
         {
             var parser = new StylesheetParser();
             const string source = ".foo { color: red; } @media print { #myid { color: green; } }";
@@ -965,7 +965,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssStyleSheetWithCommentInDeclaration()
+        public void StyleSheetWithCommentInDeclaration()
         {
             var parser = new StylesheetParser(preserveComments:true);
             const string source = ".foo { /*test*/ color: red;/*test*/ } @media print { #myid { color: green; } }";
@@ -980,7 +980,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssStyleSheetWithCommentInRule()
+        public void StyleSheetWithCommentInRule()
         {
             var parser = new StylesheetParser(preserveComments: true);
             const string source = ".foo { color: red; } @media print { /*test*/ #myid { color: green; } /*test*/ }";
@@ -995,7 +995,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssStyleSheetWithCommentInMedia()
+        public void StyleSheetWithCommentInMedia()
         {
             var parser = new StylesheetParser(preserveComments: true);
             var source = ".foo { color: red; } @media all /*test*/ and /*test*/ (min-width: 701px) /*test*/ { #myid { color: green; } }";
@@ -1010,7 +1010,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssStyleSheetSimpleRoundtrip()
+        public void StyleSheetSimpleRoundtrip()
         {
             var parser = new StylesheetParser(preserveComments: true);
             const string source = ".foo { color: red; } @media all /*test*/ and /*test*/ (min-width: 701px) /*test*/ { #myid { color: green; } }";
@@ -1021,7 +1021,7 @@ p.info span::after {
 
        
         [Fact]
-        public void CssStyleSheetSelectorsGetAll()
+        public void StyleSheetSelectorsGetAll()
         {
             var parser = new StylesheetParser();
 
@@ -1039,7 +1039,7 @@ p.info span::after {
         }
 
         [Fact]
-        public void CssColorFunctionsMixAllShouldWork()
+        public void ColorFunctionsMixAllShouldWork()
         {
             var parser = new StylesheetParser();
             const string source = @"

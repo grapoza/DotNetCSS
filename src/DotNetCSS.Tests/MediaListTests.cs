@@ -5,7 +5,7 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssMediaListTests : CssConstructionFunctions
+    public class MediaListTests : CssConstructionFunctions
     {
         [Fact]
         public void SimpleScreenMediaList()

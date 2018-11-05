@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssTokenizationTests
+    public class TokenizationTests
     {
         [Fact]
-        public void CssParserIdentifier()
+        public void ParserIdentifier()
         {
             var teststring = "h1 { background: blue; }";
             var tokenizer = new Lexer(new TextSource(teststring));
@@ -16,7 +16,7 @@
         }
 
         [Fact]
-        public void CssParserAtRule()
+        public void ParserAtRule()
         {
             var teststring = "@media { background: blue; }";
             var tokenizer = new Lexer(new TextSource(teststring));
@@ -25,7 +25,7 @@
         }
 
         [Fact]
-        public void CssParserUrlUnquoted()
+        public void ParserUrlUnquoted()
         {
             var url = "http://someurl";
             var teststring = "url(" + url + ")";
@@ -35,7 +35,7 @@
         }
 
         [Fact]
-        public void CssParserUrlDoubleQuoted()
+        public void ParserUrlDoubleQuoted()
         {
             var url = "http://someurl";
             var teststring = "url(\"" + url + "\")";
@@ -45,7 +45,7 @@
         }
 
         [Fact]
-        public void CssParserUrlSingleQuoted()
+        public void ParserUrlSingleQuoted()
         {
             var url = "http://someurl";
             var teststring = "url('" + url + "')";

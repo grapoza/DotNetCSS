@@ -4,7 +4,7 @@
     using System.Linq;
 
     //[TestFixture]
-    public class CssKeyframeRuleTests : CssConstructionFunctions
+    public class KeyframeRuleTests : CssConstructionFunctions
     {
         [Fact]
         public void KeyframeRuleWithFromAndMarginLeft()

@@ -4,10 +4,10 @@
     using Xunit;
 
     //[TestFixture]
-    public class CssPropertyTests : CssConstructionFunctions
+    public class PropertyTests : CssConstructionFunctions
     {
         [Fact]
-        public void CssBreakAfterLegalAvoid()
+        public void BreakAfterLegalAvoid()
         {
             var snippet = "break-after:avoid";
             var property = ParseDeclaration(snippet);
@@ -21,7 +21,7 @@
         }
 
         [Fact]
-        public void CssPageBreakAfterLegalAvoid()
+        public void PageBreakAfterLegalAvoid()
         {
             var snippet = "page-break-after:avoid";
             var property = ParseDeclaration(snippet);
@@ -35,7 +35,7 @@
         }
 
         [Fact]
-        public void CssBreakAfterLegalPageCapital()
+        public void BreakAfterLegalPageCapital()
         {
             var snippet = "break-after:Page";
             var property = ParseDeclaration(snippet);
@@ -49,7 +49,7 @@
         }
 
         [Fact]
-        public void CssPageBreakAfterIllegalAvoidColumn()
+        public void PageBreakAfterIllegalAvoidColumn()
         {
             var snippet = "page-break-after:avoid-column";
             var property = ParseDeclaration(snippet);
@@ -62,7 +62,7 @@
         }
 
         [Fact]
-        public void CssBreakAfterLegalAvoidColumn()
+        public void BreakAfterLegalAvoidColumn()
         {
             var snippet = "break-after:avoid-column";
             var property = ParseDeclaration(snippet);
@@ -76,7 +76,7 @@
         }
 
         [Fact]
-        public void CssBreakBeforeLegalAvoidColumn()
+        public void BreakBeforeLegalAvoidColumn()
         {
             var snippet = "break-before:AUTO";
             var property = ParseDeclaration(snippet);
@@ -90,7 +90,7 @@
         }
 
         [Fact]
-        public void CssPageBreakBeforeLegalAvoid()
+        public void PageBreakBeforeLegalAvoid()
         {
             var snippet = "page-break-before:AUTO";
             var property = ParseDeclaration(snippet);
@@ -104,7 +104,7 @@
         }
 
         [Fact]
-        public void CssPageBreakBeforeLegalLeft()
+        public void PageBreakBeforeLegalLeft()
         {
             var snippet = "page-break-before:left";
             var property = ParseDeclaration(snippet);
@@ -118,7 +118,7 @@
         }
 
         [Fact]
-        public void CssBreakBeforeIllegalValue()
+        public void BreakBeforeIllegalValue()
         {
             var snippet = "break-before:whatever";
             var property = ParseDeclaration(snippet);
@@ -131,7 +131,7 @@
         }
 
         [Fact]
-        public void CssBreakInsideIllegalPage()
+        public void BreakInsideIllegalPage()
         {
             var snippet = "break-inside:page";
             var property = ParseDeclaration(snippet);
@@ -144,7 +144,7 @@
         }
 
         [Fact]
-        public void CssBreakInsideLegalAvoidRegionUppercase()
+        public void BreakInsideLegalAvoidRegionUppercase()
         {
             var snippet = "break-inside:avoid-REGION";
             var property = ParseDeclaration(snippet);
@@ -158,7 +158,7 @@
         }
 
         [Fact]
-        public void CssPageBreakInsideLegalAvoid()
+        public void PageBreakInsideLegalAvoid()
         {
             var snippet = "page-break-inside:avoid";
             var property = ParseDeclaration(snippet);
@@ -172,7 +172,7 @@
         }
 
         [Fact]
-        public void CssPageBreakInsideLegalAutoUppercase()
+        public void PageBreakInsideLegalAutoUppercase()
         {
             var snippet = "page-break-inside:AUTO";
             var property = ParseDeclaration(snippet);
@@ -186,7 +186,7 @@
         }
 
         [Fact]
-        public void CssClearLegalLeft()
+        public void ClearLegalLeft()
         {
             var snippet = "clear:left";
             var property = ParseDeclaration(snippet);
@@ -200,7 +200,7 @@
         }
 
         [Fact]
-        public void CssClearLegalBoth()
+        public void ClearLegalBoth()
         {
             var snippet = "clear:both";
             var property = ParseDeclaration(snippet);
@@ -214,7 +214,7 @@
         }
 
         [Fact]
-        public void CssClearInherited()
+        public void ClearInherited()
         {
             var snippet = "clear:inherit";
             var property = ParseDeclaration(snippet);
@@ -228,7 +228,7 @@
         }
 
         [Fact]
-        public void CssClearIllegal()
+        public void ClearIllegal()
         {
             var snippet = "clear:yes";
             var property = ParseDeclaration(snippet);
@@ -241,7 +241,7 @@
         }
 
         [Fact]
-        public void CssPositionLegalAbsolute()
+        public void PositionLegalAbsolute()
         {
             var snippet = "position:absolute";
             var property = ParseDeclaration(snippet);
@@ -255,7 +255,7 @@
         }
 
         [Fact]
-        public void CssDisplayLegalBlock()
+        public void DisplayLegalBlock()
         {
             var snippet = "display:   block ";
             var property = ParseDeclaration(snippet);
@@ -269,7 +269,7 @@
         }
 
         [Fact]
-        public void CssVisibilityLegalCollapse()
+        public void VisibilityLegalCollapse()
         {
             var snippet = "visibility:collapse";
             var property = ParseDeclaration(snippet);
@@ -283,7 +283,7 @@
         }
 
         [Fact]
-        public void CssVisibilityLegalHiddenCompleteUppercase()
+        public void VisibilityLegalHiddenCompleteUppercase()
         {
             var snippet = "VISIBILITY:HIDDEN";
             var property = ParseDeclaration(snippet);
@@ -297,7 +297,7 @@
         }
 
         [Fact]
-        public void CssOverflowLegalAuto()
+        public void OverflowLegalAuto()
         {
             var snippet = "overflow:auto";
             var property = ParseDeclaration(snippet);
@@ -311,7 +311,7 @@
         }
 
         [Fact]
-        public void CssTableLayoutLegalFixedCapitalX()
+        public void TableLayoutLegalFixedCapitalX()
         {
             var snippet = "table-layout: fiXed";
             var property = ParseDeclaration(snippet);
@@ -325,7 +325,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowOffsetLegal()
+        public void BoxShadowOffsetLegal()
         {
             var snippet = "box-shadow:  5px 4px";
             var property = ParseDeclaration(snippet);
@@ -339,7 +339,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowInsetOffsetLegal()
+        public void BoxShadowInsetOffsetLegal()
         {
             var snippet = "box-shadow: inset 5px 4px";
             var property = ParseDeclaration(snippet);
@@ -353,7 +353,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowNoneUppercaseLegal()
+        public void BoxShadowNoneUppercaseLegal()
         {
             var snippet = "box-shadow: NONE";
             var property = ParseDeclaration(snippet);
@@ -367,7 +367,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowNormalTealLegal()
+        public void BoxShadowNormalTealLegal()
         {
             var snippet = "box-shadow: 60px -16px teal";
             var property = ParseDeclaration(snippet);
@@ -381,7 +381,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowNormalSpreadBlackLegal()
+        public void BoxShadowNormalSpreadBlackLegal()
         {
             var snippet = "box-shadow: 10px 5px 5px black";
             var property = ParseDeclaration(snippet);
@@ -395,7 +395,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowOliveAndRedLegal()
+        public void BoxShadowOliveAndRedLegal()
         {
             var snippet = "box-shadow: 3px 3px red, -1em 0 0.4em olive";
             var property = ParseDeclaration(snippet);
@@ -409,7 +409,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowInsetGoldLegal()
+        public void BoxShadowInsetGoldLegal()
         {
             var snippet = "box-shadow: inset 5em 1em gold";
             var property = ParseDeclaration(snippet);
@@ -423,7 +423,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowZeroGoldLegal()
+        public void BoxShadowZeroGoldLegal()
         {
             var snippet = "box-shadow: 0 0 1em gold";
             var property = ParseDeclaration(snippet);
@@ -437,7 +437,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowInsetZeroGoldLegal()
+        public void BoxShadowInsetZeroGoldLegal()
         {
             var snippet = "box-shadow: inset  0 0 1em gold";
             var property = ParseDeclaration(snippet);
@@ -451,7 +451,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowInsetZeroGoldAndNormalRedLegal()
+        public void BoxShadowInsetZeroGoldAndNormalRedLegal()
         {
             var snippet = "box-shadow: inset  0 0 1em  gold   ,  0 0   1em   red !important";
             var property = ParseDeclaration(snippet);
@@ -465,7 +465,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowOffsetColorLegal()
+        public void BoxShadowOffsetColorLegal()
         {
             var snippet = "box-shadow:  5px 4px #000";
             var property = ParseDeclaration(snippet);
@@ -479,7 +479,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowOffsetBlurColorLegal()
+        public void BoxShadowOffsetBlurColorLegal()
         {
             var snippet = "box-shadow:  5px 4px 2px #000";
             var property = ParseDeclaration(snippet);
@@ -493,7 +493,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowInitialUppercaseLegal()
+        public void BoxShadowInitialUppercaseLegal()
         {
             var snippet = "box-shadow:  INITIAL";
             var property = ParseDeclaration(snippet);
@@ -507,7 +507,7 @@
         }
 
         [Fact]
-        public void CssBoxShadowOffsetIllegal()
+        public void BoxShadowOffsetIllegal()
         {
             var snippet = "box-shadow:  5px 4px 2px 1px 3px #f00";
             var property = ParseDeclaration(snippet);
@@ -520,7 +520,7 @@
         }
 
         [Fact]
-        public void CssClipShapeLegal()
+        public void ClipShapeLegal()
         {
             var snippet = "clip: rect( 2px, 3em, 1in, 0cm )";
             var property = ParseDeclaration(snippet);
@@ -534,7 +534,7 @@
         }
 
         [Fact]
-        public void CssClipShapeBackwards()
+        public void ClipShapeBackwards()
         {
             var snippet = "clip: rect( 2px 3em 1in 0cm )";
             var property = ParseDeclaration(snippet);
@@ -548,7 +548,7 @@
         }
 
         [Fact]
-        public void CssClipShapeZerosLegal()
+        public void ClipShapeZerosLegal()
         {
             var snippet = "clip: rect(0, 0, 0, 0)";
             var property = ParseDeclaration(snippet);
@@ -562,7 +562,7 @@
         }
 
         [Fact]
-        public void CssClipShapeZerosIllegal()
+        public void ClipShapeZerosIllegal()
         {
             var snippet = "clip: rect(0, 0, 0 0)";
             var property = ParseDeclaration(snippet);
@@ -575,7 +575,7 @@
         }
 
         [Fact]
-        public void CssClipShapeNonZerosIllegal()
+        public void ClipShapeNonZerosIllegal()
         {
             var snippet = "clip: rect(2px, 1cm, 5mm)";
             var property = ParseDeclaration(snippet);
@@ -588,7 +588,7 @@
         }
 
         [Fact]
-        public void CssClipShapeSingleValueIllegal()
+        public void ClipShapeSingleValueIllegal()
         {
             var snippet = "clip: rect(1em)";
             var property = ParseDeclaration(snippet);
@@ -601,7 +601,7 @@
         }
 
         [Fact]
-        public void CssCursorDefaultUppercaseLegal()
+        public void CursorDefaultUppercaseLegal()
         {
             var snippet = "cursor: DEFAULT";
             var property = ParseDeclaration(snippet);
@@ -615,7 +615,7 @@
         }
 
         [Fact]
-        public void CssCursorAutoLegal()
+        public void CursorAutoLegal()
         {
             var snippet = "cursor: auto";
             var property = ParseDeclaration(snippet);
@@ -629,7 +629,7 @@
         }
 
         [Fact]
-        public void CssCursorZoomOutLegal()
+        public void CursorZoomOutLegal()
         {
             var snippet = "cursor  : zoom-out";
             var property = ParseDeclaration(snippet);
@@ -643,7 +643,7 @@
         }
 
         [Fact]
-        public void CssCursorUrlNoFallbackIllegal()
+        public void CursorUrlNoFallbackIllegal()
         {
             var snippet = "cursor  : url(foo.png)";
             var property = ParseDeclaration(snippet);
@@ -656,7 +656,7 @@
         }
 
         [Fact]
-        public void CssCursorUrlLegal()
+        public void CursorUrlLegal()
         {
             var snippet = "cursor  : url(foo.png), default";
             var property = ParseDeclaration(snippet);
@@ -670,7 +670,7 @@
         }
 
         [Fact]
-        public void CssCursorUrlShiftedLegal()
+        public void CursorUrlShiftedLegal()
         {
             var snippet = "cursor  : url(foo.png) 0 5, auto";
             var property = ParseDeclaration(snippet);
@@ -684,7 +684,7 @@
         }
 
         [Fact]
-        public void CssCursorUrlShiftedNoFallbackIllegal()
+        public void CursorUrlShiftedNoFallbackIllegal()
         {
             var snippet = "cursor  : url(foo.png) 0 5";
             var property = ParseDeclaration(snippet);
@@ -697,7 +697,7 @@
         }
 
         [Fact]
-        public void CssCursorUrlsLegal()
+        public void CursorUrlsLegal()
         {
             var snippet = "cursor  : url(foo.png), url(master.png), url(more.png), wait";
             var property = ParseDeclaration(snippet);
@@ -711,7 +711,7 @@
         }
 
         [Fact]
-        public void CssColorHexLegal()
+        public void ColorHexLegal()
         {
             var snippet = "color : #123456";
             var property = ParseDeclaration(snippet);
@@ -725,7 +725,7 @@
         }
 
         [Fact]
-        public void CssColorRgbLegal()
+        public void ColorRgbLegal()
         {
             var snippet = "color : rgb(121, 181, 201)";
             var property = ParseDeclaration(snippet);
@@ -739,7 +739,7 @@
         }
 
         [Fact]
-        public void CssColorRgbaLegal()
+        public void ColorRgbaLegal()
         {
             var snippet = "color : rgba(255, 255, 201, 0.7)";
             var property = ParseDeclaration(snippet);
@@ -753,7 +753,7 @@
         }
 
         [Fact]
-        public void CssColorNameLegal()
+        public void ColorNameLegal()
         {
             var snippet = "color : red";
             var property = ParseDeclaration(snippet);
@@ -767,7 +767,7 @@
         }
 
         [Fact]
-        public void CssColorNameUppercaseLegal()
+        public void ColorNameUppercaseLegal()
         {
             var snippet = "color : BLUE";
             var property = ParseDeclaration(snippet);
@@ -781,7 +781,7 @@
         }
 
         [Fact]
-        public void CssColorNameIllegal()
+        public void ColorNameIllegal()
         {
             var snippet = "color : horse";
             var property = ParseDeclaration(snippet);
@@ -794,7 +794,7 @@
         }
 
         [Fact]
-        public void CssOrphansZeroLegal()
+        public void OrphansZeroLegal()
         {
             var snippet = "orphans : 0 ";
             var property = ParseDeclaration(snippet);
@@ -808,7 +808,7 @@
         }
 
         [Fact]
-        public void CssOrphansTwoLegal()
+        public void OrphansTwoLegal()
         {
             var snippet = "orphans : 2 ";
             var property = ParseDeclaration(snippet);
@@ -822,7 +822,7 @@
         }
 
         [Fact]
-        public void CssOrphansNegativeIllegal()
+        public void OrphansNegativeIllegal()
         {
             var snippet = "orphans : -2 ";
             var property = ParseDeclaration(snippet);
@@ -835,7 +835,7 @@
         }
 
         [Fact]
-        public void CssOrphansFloatingIllegal()
+        public void OrphansFloatingIllegal()
         {
             var snippet = "orphans : 1.5 ";
             var property = ParseDeclaration(snippet);
@@ -848,7 +848,7 @@
         }
 
         [Fact]
-        public void CssBoxDecorationBreakNumberIllegal()
+        public void BoxDecorationBreakNumberIllegal()
         {
             var snippet = "box-decoration-break : 1.5 ";
             var property = ParseDeclaration(snippet);
@@ -861,7 +861,7 @@
         }
 
         [Fact]
-        public void CssBoxDecorationBreakSliceLegal()
+        public void BoxDecorationBreakSliceLegal()
         {
             var snippet = "box-decoration-break : slice ";
             var property = ParseDeclaration(snippet);
@@ -875,7 +875,7 @@
         }
 
         [Fact]
-        public void CssBoxDecorationBreakClonePascalLegal()
+        public void BoxDecorationBreakClonePascalLegal()
         {
             var snippet = "box-decoration-break : Clone ";
             var property = ParseDeclaration(snippet);
@@ -889,7 +889,7 @@
         }
 
         [Fact]
-        public void CssBoxDecorationBreakInheritLegal()
+        public void BoxDecorationBreakInheritLegal()
         {
             var snippet = "box-decoration-break : inherit!important ";
             var property = ParseDeclaration(snippet);
@@ -903,7 +903,7 @@
         }
 
         [Fact]
-        public void CssContentNormalLegal()
+        public void ContentNormalLegal()
         {
             var snippet = "content : normal ";
             var property = ParseDeclaration(snippet);
@@ -917,7 +917,7 @@
         }
 
         [Fact]
-        public void CssContentNoneLegalUppercaseN()
+        public void ContentNoneLegalUppercaseN()
         {
             var snippet = "content : noNe ";
             var property = ParseDeclaration(snippet);
@@ -931,7 +931,7 @@
         }
 
         [Fact]
-        public void CssContentStringLegal()
+        public void ContentStringLegal()
         {
             var snippet = "content : 'hi' ";
             var property = ParseDeclaration(snippet);
@@ -945,7 +945,7 @@
         }
 
         [Fact]
-        public void CssContentNoOpenQuoteNoCloseQuoteLegal()
+        public void ContentNoOpenQuoteNoCloseQuoteLegal()
         {
             var snippet = "content : no-open-quote no-close-quote ";
             var property = ParseDeclaration(snippet);
@@ -959,7 +959,7 @@
         }
 
         [Fact]
-        public void CssContentUrlLegal()
+        public void ContentUrlLegal()
         {
             var snippet = "content : url(test.html) ";
             var property = ParseDeclaration(snippet);
@@ -973,7 +973,7 @@
         }
 
         [Fact]
-        public void CssContentStringsLegal()
+        public void ContentStringsLegal()
         {
             var snippet = "content : 'how' 'are' 'you' ";
             var property = ParseDeclaration(snippet);
@@ -987,7 +987,7 @@
         }
 
         [Fact]
-        public void CssQuoteStringIllegal()
+        public void QuoteStringIllegal()
         {
             var snippet = "quotes : '\"' ";
             var property = ParseDeclaration(snippet);
@@ -1000,7 +1000,7 @@
         }
 
         [Fact]
-        public void CssQuoteStringsLegal()
+        public void QuoteStringsLegal()
         {
             var snippet = "quotes : '\"' '\"' ";
             var property = ParseDeclaration(snippet);
@@ -1014,7 +1014,7 @@
         }
 
         [Fact]
-        public void CssQuoteStringsIllegal()
+        public void QuoteStringsIllegal()
         {
             var snippet = "quotes : \"'\"";
             var property = ParseDeclaration(snippet);
@@ -1027,7 +1027,7 @@
         }
 
         [Fact]
-        public void CssQuoteStringsMultipleLegal()
+        public void QuoteStringsMultipleLegal()
         {
             var snippet = "quotes : '\"' '\"' '`' '´' ";
             var property = ParseDeclaration(snippet);
@@ -1041,7 +1041,7 @@
         }
 
         [Fact]
-        public void CssQuoteStringsMultipleIllegal()
+        public void QuoteStringsMultipleIllegal()
         {
             var snippet = "quotes : '\"' '\"' '`' ";
             var property = ParseDeclaration(snippet);
@@ -1054,7 +1054,7 @@
         }
 
         [Fact]
-        public void CssQuoteNoneLegal()
+        public void QuoteNoneLegal()
         {
             var snippet = "quotes : none";
             var property = ParseDeclaration(snippet);
@@ -1068,7 +1068,7 @@
         }
 
         [Fact]
-        public void CssQuoteNoneStringIllegal()
+        public void QuoteNoneStringIllegal()
         {
             var snippet = "quotes : 'none'";
             var property = ParseDeclaration(snippet);
@@ -1081,7 +1081,7 @@
         }
 
         [Fact]
-        public void CssQuoteNormalIllegal()
+        public void QuoteNormalIllegal()
         {
             var snippet = "quotes : normal ";
             var property = ParseDeclaration(snippet);
@@ -1094,7 +1094,7 @@
         }
 
         [Fact]
-        public void CssWidowsZeroLegal()
+        public void WidowsZeroLegal()
         {
             var snippet = "widows: 0";
             var property = ParseDeclaration(snippet);
@@ -1109,7 +1109,7 @@
         }
 
         [Fact]
-        public void CssWidowsThreeLegal()
+        public void WidowsThreeLegal()
         {
             var snippet = "widows: 3";
             var property = ParseDeclaration(snippet);
@@ -1124,7 +1124,7 @@
         }
 
         [Fact]
-        public void CssWidowsLengthIllegal()
+        public void WidowsLengthIllegal()
         {
             var snippet = "widows: 5px";
             var property = ParseDeclaration(snippet);
@@ -1138,7 +1138,7 @@
         }
 
         [Fact]
-        public void CssUnicodeBidiEmbedLegal()
+        public void UnicodeBidiEmbedLegal()
         {
             var snippet = "unicode-BIDI: Embed";
             var property = ParseDeclaration(snippet);
@@ -1153,7 +1153,7 @@
         }
 
         [Fact]
-        public void CssUnicodeBidiIsolateLegal()
+        public void UnicodeBidiIsolateLegal()
         {
             var snippet = "unicode-Bidi: isolate";
             var property = ParseDeclaration(snippet);
@@ -1168,7 +1168,7 @@
         }
 
         [Fact]
-        public void CssUnicodeBidiBidiOverrideLegal()
+        public void UnicodeBidiBidiOverrideLegal()
         {
             var snippet = "unicode-Bidi: Bidi-Override";
             var property = ParseDeclaration(snippet);
@@ -1183,7 +1183,7 @@
         }
 
         [Fact]
-        public void CssUnicodeBidiPlaintextLegal()
+        public void UnicodeBidiPlaintextLegal()
         {
             var snippet = "unicode-Bidi: PLAINTEXT";
             var property = ParseDeclaration(snippet);
@@ -1198,7 +1198,7 @@
         }
 
         [Fact]
-        public void CssUnicodeBidiIllegal()
+        public void UnicodeBidiIllegal()
         {
             var snippet = "unicode-bidi: none";
             var property = ParseDeclaration(snippet);
@@ -1212,7 +1212,7 @@
         }
 
         [Fact]
-        public void CssPropertyFactoryCalls()
+        public void PropertyFactoryCalls()
         {
             var parser = new StylesheetParser();
             var decl = new StyleDeclaration(parser);
@@ -1233,7 +1233,7 @@
         }
 
         [Fact]
-        public void CssUnknownPropertyPreservesCase()
+        public void UnknownPropertyPreservesCase()
         {
             var snippet = "my-Property: something";
             var property = ParseDeclaration(snippet, includeUnknownDeclarations:true);

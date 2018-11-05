@@ -5,7 +5,7 @@
     using System;
 
     //[TestFixture]
-    public class CssImportRuleTests
+    public class ImportRuleTests
     {
         static ImportRule NewImportRule(string cssText)
         {
@@ -15,7 +15,7 @@
         }
 
         [Fact]
-        public void CssImportWithNonQuotedUrl()
+        public void ImportWithNonQuotedUrl()
         {
             var source = "@import url(button.css);";
             var rule = NewImportRule(source);
@@ -24,7 +24,7 @@
         }
 
         [Fact]
-        public void CssImportWithDoubleQuotedUrl()
+        public void ImportWithDoubleQuotedUrl()
         {
             var source = "@import url(\"button.css\");";
             var rule = NewImportRule(source);
@@ -33,7 +33,7 @@
         }
 
         [Fact]
-        public void CssImportWithSingleQuotedUrl()
+        public void ImportWithSingleQuotedUrl()
         {
             var source = "@import url('button.css');";
             var rule = NewImportRule(source);
@@ -42,7 +42,7 @@
         }
 
         [Fact]
-        public void CssImportWithDoubleQuotedStringAsUrl()
+        public void ImportWithDoubleQuotedStringAsUrl()
         {
             var source = "@import \"button.css\";";
             var rule = NewImportRule(source);
@@ -51,7 +51,7 @@
         }
 
         [Fact]
-        public void CssImportWithSingleQuotedStringAsUrl()
+        public void ImportWithSingleQuotedStringAsUrl()
         {
             var source = "@import 'button.css';";
             var rule = NewImportRule(source);
@@ -60,7 +60,7 @@
         }
 
         [Fact]
-        public void CssImportWithUrlAndAllMedia()
+        public void ImportWithUrlAndAllMedia()
         {
             var media = "all";
             var source = "@import url(size/medium.css) " + media + ";";
@@ -71,7 +71,7 @@
         }
 
         [Fact]
-        public void CssImportWithUrlAndComplicatedMedia()
+        public void ImportWithUrlAndComplicatedMedia()
         {
             var media = "screen and (color), projection and (min-color: 256)";
             var source = "@import url(old.css) " + media + ";";

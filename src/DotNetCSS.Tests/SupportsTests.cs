@@ -5,7 +5,7 @@
     using System;
 
     //[TestFixture]
-    public class CssSupportsTests : CssConstructionFunctions
+    public class SupportsTests : CssConstructionFunctions
     {
         [Fact]
         public void SupportsEmptyRule()
